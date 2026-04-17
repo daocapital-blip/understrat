@@ -903,9 +903,9 @@ section {
 
 .receipt-note {
   font-family: var(--body);
-  font-style: italic;
-  font-size: 16px;
-  line-height: 1.55;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 1.65;
   color: var(--ink-mid);
   max-width: 720px;
   margin: 0 auto 24px;
