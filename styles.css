@@ -4,25 +4,25 @@
    ==================================================================== */
 
 :root {
-  /* Light palette — clean, data-forward, Bloomberg daylight */
-  --paper:         #FAFAFA;
-  --paper-light:   #FFFFFF;
-  --paper-cream:   #FFFFFF;
-  --paper-deep:    #F0F4F8;
-  --paper-edge:    #D1D9E0;
+  /* Paper palette — warm, editorial, premium */
+  --paper:         #F2E8CD;
+  --paper-light:   #F8EFD6;
+  --paper-cream:   #FAF2D8;
+  --paper-deep:    #E2D3AE;
+  --paper-edge:    #A8895C;
 
   /* Ink palette */
-  --ink:           #1A1A2E;
-  --ink-mid:       #3D3D5C;
-  --ink-soft:      #6B7280;
-  --ink-faint:     #9CA3AF;
+  --ink:           #1E1611;
+  --ink-mid:       #44362A;
+  --ink-soft:      #7A6650;
+  --ink-faint:     #A0896B;
 
   /* Accents */
-  --accent:        #0066FF;          /* electric blue */
-  --accent-dim:    #0052CC;
-  --accent-soft:   rgba(0, 102, 255, 0.08);
-  --moss:          #00C853;
-  --bad:           #FF3D00;
+  --accent:        #B53A2A;          /* classified red */
+  --accent-dim:    #8B2A1E;
+  --accent-soft:   rgba(181, 58, 42, 0.12);
+  --moss:          #5D6B3E;
+  --bad:           #8B2A1E;
 
   /* Type */
   --display:       'Instrument Serif', Georgia, serif;
@@ -50,7 +50,7 @@ html, body {
 body {
   background:
     radial-gradient(ellipse 85% 55% at 50% 8%, var(--paper-light) 0%, transparent 60%),
-    radial-gradient(ellipse 100% 50% at 50% 100%, var(--paper-deep) 0%, transparent 50%),
+    radial-gradient(ellipse 100% 50% at 50% 100%, var(--paper-deep) 0%, transparent 70%),
     var(--paper);
   min-height: 100vh;
 }
@@ -68,8 +68,8 @@ img, svg { display: block; max-width: 100%; }
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.12;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 0.4  0 0 0 0 0.4  0 0 0 0 0.5  0 0 0 0.08 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+  opacity: 0.32;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' seed='3'/><feColorMatrix values='0 0 0 0 0.18  0 0 0 0 0.12  0 0 0 0 0.06  0 0 0 0.1 0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
   mix-blend-mode: multiply;
 }
 
@@ -81,7 +81,7 @@ img, svg { display: block; max-width: 100%; }
   top: 0;
   z-index: 40;
   height: var(--header-h);
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(250, 242, 216, 0.94);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--paper-edge);
@@ -535,7 +535,7 @@ section {
 .input-cell select:focus {
   outline: none;
   border-color: var(--accent);
-  background: rgba(0, 102, 255, 0.05);
+  background: rgba(181, 58, 42, 0.05);
 }
 .input-cell input[type="range"] {
   -webkit-appearance: none;
@@ -689,7 +689,7 @@ section {
 }
 .result-card.winner {
   border-color: var(--accent);
-  background: rgba(0, 102, 255, 0.08);
+  background: rgba(181, 58, 42, 0.08);
   opacity: 1;
   filter: saturate(1);
   box-shadow: 2px 2px 0 var(--accent);
@@ -1616,7 +1616,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 }
 .entry-option-active {
   border-color: var(--accent);
-  background: rgba(0, 102, 255, 0.05);
+  background: rgba(181, 58, 42, 0.05);
   box-shadow: 3px 3px 0 var(--accent);
 }
 .entry-option-active:hover {
@@ -1937,7 +1937,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 }
 .tam-segment.touched {
   border-color: var(--accent);
-  background: rgba(0, 102, 255, 0.04);
+  background: rgba(181, 58, 42, 0.04);
 }
 
 .tam-seg-info {
@@ -2104,7 +2104,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 }
 .tam-comp-pill.hit {
   border-color: var(--accent);
-  background: rgba(0, 102, 255, 0.2);
+  background: rgba(181, 58, 42, 0.2);
   color: var(--paper-cream);
 }
 
@@ -2814,7 +2814,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 .memo-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(26, 26, 46, 0.6);
+  background: rgba(30, 22, 17, 0.6);
   backdrop-filter: blur(3px);
   z-index: 90;
   opacity: 0;
@@ -2854,8 +2854,8 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
   box-shadow:
     0 0 0 1px var(--paper-deep) inset,
     0 4px 0 rgba(0, 0, 0, 0.04),
-    0 30px 80px rgba(26, 26, 46, 0.4),
-    0 60px 100px -40px rgba(26, 26, 46, 0.3);
+    0 30px 80px rgba(30, 22, 17, 0.4),
+    0 60px 100px -40px rgba(30, 22, 17, 0.3);
   transform: translateY(20px) scale(0.97);
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.32, 1);
 }
@@ -3131,7 +3131,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
   font-family: var(--display);
   font-size: 18px;
   color: var(--ink);
-  background: rgba(0, 102, 255, 0.06);
+  background: rgba(181, 58, 42, 0.06);
 }
 .memo-body strong, .drawer-body strong {
   color: var(--ink);
@@ -4132,13 +4132,13 @@ body.memo-open {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 16px rgba(26, 26, 46, 0.25);
+  box-shadow: 0 4px 16px rgba(30, 22, 17, 0.25);
 }
 .floating-dive:hover {
   background: var(--accent);
   border-color: var(--accent);
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(0, 102, 255, 0.3);
+  box-shadow: 0 6px 24px rgba(181, 58, 42, 0.3);
 }
 .floating-dive-icon {
   font-size: 16px;
@@ -4156,7 +4156,7 @@ body.memo-open {
 .trajectory-bearish { background: rgba(160, 137, 107, 0.06); }
 .trajectory-conservative { background: rgba(68, 54, 42, 0.05); }
 .trajectory-base { background: rgba(68, 54, 42, 0.08); }
-.trajectory-bullish:not(.trajectory-head) { background: rgba(0, 102, 255, 0.06); }
+.trajectory-bullish:not(.trajectory-head) { background: rgba(181, 58, 42, 0.06); }
 
 /* --- Better trajectory bar sizing --- */
 .trajectory-3col .trajectory-bar {
@@ -4187,7 +4187,7 @@ body.memo-open {
   padding: 28px 24px;
   margin: 24px 0 8px;
   background:
-    linear-gradient(135deg, rgba(0, 102, 255, 0.04) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(181, 58, 42, 0.04) 0%, transparent 50%),
     var(--paper-light);
   border: 2px solid var(--paper-edge);
   border-radius: 4px;
