@@ -2405,14 +2405,14 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
   font-weight: 700;
 }
 .next-act-text p {
-  font-family: var(--display);
-  font-style: italic;
-  font-size: clamp(18px, 2vw, 22px);
-  line-height: 1.45;
-  color: var(--ink);
+  font-family: var(--body);
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-mid);
   margin: 0;
 }
-.next-act-text p em { color: var(--accent); }
+.next-act-text p em { color: var(--accent); font-style: italic; }
 
 .next-act-cta {
   background: var(--ink);
