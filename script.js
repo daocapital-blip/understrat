@@ -661,7 +661,7 @@ const TAM_PRESETS = {
   clear: 0,
 };
 
-// Comparables removed — kept in investor memo only
+// Comparables removed — kept in deep dive only
 
 function setupTamSimulator() {
   const wrapper = document.getElementById('tam-segments');
