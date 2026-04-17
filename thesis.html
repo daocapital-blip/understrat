@@ -170,52 +170,62 @@
         The valuation follows from performance, <em>not narrative.</em>
       </h2>
       <p class="act-deck">
-        Most crypto valuations are vibes. This one has a measurable chain: TVL generates revenue, 60% buys back the token, and the remaining 40% funds growth that drives more TVL, which generates more revenue, which drives more buybacks. We can benchmark what that cashflow is worth by looking at how GMX, Aave, and Pendle trade today. The model: TVL × 0.5% rev/TVL × 12 × 60% × 25× P/E. You can disagree with any input. But the logic is transparent, every number is sourced, and the formula is the same either way.
+        Most crypto valuations are vibes. This one has a measurable chain: TVL generates revenue, 60% buys back the token, and the remaining 40% funds growth that drives more TVL, which generates more revenue, which drives more buybacks. We can benchmark what that cashflow is worth by comparing with other DeFi protocols that share revenue with token holders.
+      </p>
+      <p class="act-deck">
+        The model: TVL × 0.5% rev/TVL × 12 × 60% × 25× P/E. Simplified: <strong>FDV = TVL × 0.9</strong>. You can disagree with any input. But the logic is transparent, every number is sourced, and the formula is the same either way.
       </p>
     </div>
 
     <div class="tool tool-trajectory" id="invest-calc">
       <div class="tool-header">
         <span class="tool-label">your investment at each scenario</span>
-        <span class="tool-sub">type how much you'd invest · see what each TVL scenario produces at 24 months</span>
+        <span class="tool-sub">type how much you'd invest · toggle the timeframe</span>
       </div>
 
-      <div class="scale-slider" style="max-width:400px; margin-bottom: 20px;">
-        <div class="scale-slider-head">
-          <span class="scale-slider-label">your investment</span>
-          <span class="scale-slider-value">$<input type="number" id="invest-amount" value="1000" min="1" max="1000000" style="font-family:var(--display);font-style:italic;font-size:inherit;color:inherit;background:none;border:none;border-bottom:2px solid var(--accent);width:90px;text-align:right;padding:0 2px;font-variant-numeric:tabular-nums;" /></span>
+      <div style="display:flex; gap:16px; align-items:flex-end; flex-wrap:wrap; margin-bottom:20px;">
+        <div class="scale-slider" style="max-width:280px; flex:1;">
+          <div class="scale-slider-head">
+            <span class="scale-slider-label">your investment</span>
+            <span class="scale-slider-value">$<input type="number" id="invest-amount" value="1000" min="1" max="1000000" style="font-family:var(--display);font-style:italic;font-size:inherit;color:inherit;background:none;border:none;border-bottom:2px solid var(--accent);width:90px;text-align:right;padding:0 2px;font-variant-numeric:tabular-nums;" /></span>
+          </div>
+        </div>
+        <div class="tam-presets" id="invest-timeframe">
+          <button class="chip" type="button" data-tf="6">6 months</button>
+          <button class="chip" type="button" data-tf="12">12 months</button>
+          <button class="chip active" type="button" data-tf="24">24 months</button>
         </div>
       </div>
 
       <div class="trajectory-table" id="invest-results">
-        <div class="trajectory-row trajectory-head">
+        <div class="trajectory-row trajectory-3col trajectory-head">
           <span class="trajectory-lbl"></span>
-          <span class="trajectory-col">24mo TVL</span>
+          <span class="trajectory-col">TVL</span>
           <span class="trajectory-col">multiple</span>
           <span class="trajectory-col">your return</span>
         </div>
-        <div class="trajectory-row trajectory-3col trajectory-bearish" data-mult="29">
+        <div class="trajectory-row trajectory-3col trajectory-bearish" data-scenario="bearish">
           <span class="trajectory-lbl">bearish</span>
-          <div class="trajectory-col"><span class="trajectory-val">$152M</span></div>
-          <div class="trajectory-col"><span class="trajectory-val">29×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-tvl">$152M</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-mult">29×</span></div>
           <div class="trajectory-col"><span class="trajectory-val invest-return">$29,000</span></div>
         </div>
-        <div class="trajectory-row trajectory-3col trajectory-conservative" data-mult="104">
+        <div class="trajectory-row trajectory-3col trajectory-conservative" data-scenario="conservative">
           <span class="trajectory-lbl">conservative</span>
-          <div class="trajectory-col"><span class="trajectory-val">$557M</span></div>
-          <div class="trajectory-col"><span class="trajectory-val">104×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-tvl">$557M</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-mult">104×</span></div>
           <div class="trajectory-col"><span class="trajectory-val invest-return">$104,000</span></div>
         </div>
-        <div class="trajectory-row trajectory-3col trajectory-base" data-mult="240">
+        <div class="trajectory-row trajectory-3col trajectory-base" data-scenario="base">
           <span class="trajectory-lbl">base</span>
-          <div class="trajectory-col"><span class="trajectory-val">$1.28B</span></div>
-          <div class="trajectory-col"><span class="trajectory-val">240×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-tvl">$1.28B</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-mult">240×</span></div>
           <div class="trajectory-col"><span class="trajectory-val invest-return">$240,000</span></div>
         </div>
-        <div class="trajectory-row trajectory-3col trajectory-bullish" data-mult="636">
+        <div class="trajectory-row trajectory-3col trajectory-bullish" data-scenario="bullish">
           <span class="trajectory-lbl">bullish</span>
-          <div class="trajectory-col"><span class="trajectory-val">$3.39B</span></div>
-          <div class="trajectory-col"><span class="trajectory-val">636×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-tvl">$3.39B</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-mult">636×</span></div>
           <div class="trajectory-col"><span class="trajectory-val invest-return">$636,000</span></div>
         </div>
       </div>
@@ -232,41 +242,30 @@
       </div>
       <span class="risk-callout-sep">vs</span>
       <div class="risk-callout-side">
-        <span class="risk-callout-label">base case</span>
-        <span class="risk-callout-val"><em>240×</em></span>
+        <span class="risk-callout-label">bull case</span>
+        <span class="risk-callout-val"><em>636×</em></span>
       </div>
       <p class="risk-callout-note">Even the bearish case (Peapods' proven rate, nothing improves) produces a 29× from today's price. The conservative case alone is 104×. Downside risks (exploits, slower growth, competitive pressure) are real but observable within months of launch.</p>
     </div>
 
-    <div class="key-points">
-      <div class="key-points-head">
-        <div class="key-points-titles">
-          <span class="key-points-label">the risk-adjusted case</span>
-          <span class="key-points-sub">why the math favours taking a position even if you're not fully convinced</span>
-        </div>
-      </div>
-      <ol class="key-list">
-        <li>
-          <strong>The coin flip you'd always take.</strong>
-          Imagine someone offers you a bet. You put in $100. There's a ~20% chance something breaks (exploit, team failure) and you lose the $100. There's an ~80% chance the protocol works, and you win somewhere between $2,900 (bearish, 29×) and $63,600 (bullish, 636×). You don't need to know the exact outcome. You just need to know the bet is worth taking. In expected value terms, every $1 risked has a weighted payoff of roughly $50-$100, depending on how you weight the scenarios. Most investments in crypto, venture, or even public equity don't offer that ratio.
-        </li>
-        <li>
-          <strong>Compare to anything else you could buy.</strong>
-          ETH from here might 2-3× in a bull cycle. BTC might 2×. An altcoin with narrative might 10×. A pre-launch token with a proven revenue engine, a team that already shipped at $105M TVL, and a $4.8M market cap has a 29× floor before any improvement kicks in. The risk/reward is structurally different from almost anything else at this price level.
-        </li>
-        <li>
-          <strong>The risks are real but monitorable.</strong>
-          Smart contract exploits, team execution failure, competitive pressure, revenue underperformance. All legitimate risks. But each is observable within weeks to months of launch. You don't need to wait 24 months. If month-3 TVL is tracking bearish or below, you have data to act on. If it's tracking conservative or above, the thesis is validating in real time.
-        </li>
-        <li>
-          <strong>Bear-market TAM, bull-market product.</strong>
-          The ~$199B TAM is sized during current conditions. DeFi has expanded 2-5× during previous bull cycles. At the same market share on a $400B TAM, every scenario scales proportionally. The product (leverage + yield) attracts more capital when risk appetite returns.
-        </li>
-      </ol>
-    </div>
+    <p class="act-deck">
+      <strong>The coin flip you'd always take.</strong> Put in $100. There's a ~20% chance something breaks and you lose it. An ~80% chance the protocol works and you win somewhere between $2,900 (bearish) and $63,600 (bullish). Every $1 risked has a weighted payoff of roughly $50-$100. Most investments in crypto, venture, or public equity don't offer that ratio.
+    </p>
+
+    <p class="act-deck">
+      <strong>Compare to anything else you could buy.</strong> ETH from here might 2-3× in a bull cycle. BTC might 2×. A narrative altcoin might 10×. A pre-launch protocol with a proven revenue engine and a $4.8M market cap has a 29× floor before any improvement kicks in. The risk/reward is structurally different.
+    </p>
+
+    <p class="act-deck">
+      <strong>The risks are real but monitorable.</strong> Smart contract exploits, team execution failure, competitive pressure, revenue underperformance. All legitimate. But each is observable within weeks to months of launch. If month-3 TVL is tracking bearish or below, you have data to act on. If it's tracking conservative or above, the thesis is validating in real time.
+    </p>
+
+    <p class="act-deck">
+      <strong>Bear-market TAM, bull-market product.</strong> The ~$199B TAM is sized during current conditions. DeFi has expanded 2-5× during previous bull cycles. At the same market share on a $400B TAM, every scenario scales proportionally.
+    </p>
 
     <p class="tok-note">
-      <span class="tok-note-k">not investment advice.</span> This is an independent analysis by one anonymous DeFi user. Every input is verifiable on DefiLlama. Every assumption is transparent. Disagree with any capture rate, rev/TVL, or P/E multiple? Change it and recalculate. The formula is the same either way.
+      <span class="tok-note-k">not investment advice.</span> This is an independent analysis by one DeFi user. Every input is verifiable on DefiLlama. Every assumption is transparent. Disagree with any input? Change the TVL and recalculate.
     </p>
   </section>
 

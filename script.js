@@ -809,24 +809,49 @@ function setupDrawer() {
 // ====================================================================
 // TOOL V — INVESTMENT CALCULATORS (Hero + Act 4 Part 3)
 // ====================================================================
+// TVL + multiplier data per scenario per timeframe
+const INVEST_DATA = {
+  bearish:      { 6: { tvl: 70e6,   mult: 13 },  12: { tvl: 130e6,  mult: 24 },  24: { tvl: 152e6,   mult: 29 } },
+  conservative: { 6: { tvl: 150e6,  mult: 28 },  12: { tvl: 310e6,  mult: 58 },  24: { tvl: 557e6,   mult: 104 } },
+  base:         { 6: { tvl: 240e6,  mult: 45 },  12: { tvl: 595e6,  mult: 112 }, 24: { tvl: 1.28e9,  mult: 240 } },
+  bullish:      { 6: { tvl: 530e6,  mult: 99 },  12: { tvl: 1.45e9, mult: 272 }, 24: { tvl: 3.39e9,  mult: 636 } },
+};
+
 function setupInvestCalc() {
   const input = document.getElementById('invest-amount');
   if (!input) return;
-  const rows = document.querySelectorAll('#invest-results [data-mult]');
+  const rows = document.querySelectorAll('#invest-results [data-scenario]');
+  const tfChips = document.querySelectorAll('#invest-timeframe [data-tf]');
+  let currentTf = '24';
 
   function update() {
     const amount = Math.max(1, parseFloat(input.value) || 1000);
     rows.forEach(row => {
-      const mult = parseFloat(row.dataset.mult);
-      const result = amount * mult;
-      const el = row.querySelector('.invest-return');
-      if (el) {
-        if (result >= 1_000_000) el.textContent = `$${(result / 1_000_000).toFixed(1)}M`;
-        else if (result >= 1_000) el.textContent = `$${Math.round(result).toLocaleString()}`;
-        else el.textContent = `$${result.toFixed(0)}`;
+      const scenario = row.dataset.scenario;
+      const d = INVEST_DATA[scenario] && INVEST_DATA[scenario][currentTf];
+      if (!d) return;
+      const result = amount * d.mult;
+      const tvlEl = row.querySelector('.invest-tvl');
+      const multEl = row.querySelector('.invest-mult');
+      const retEl = row.querySelector('.invest-return');
+      if (tvlEl) tvlEl.textContent = fmtUsdCompact(d.tvl);
+      if (multEl) multEl.textContent = `${d.mult}×`;
+      if (retEl) {
+        if (result >= 1_000_000) retEl.textContent = `$${(result / 1_000_000).toFixed(1)}M`;
+        else if (result >= 1_000) retEl.textContent = `$${Math.round(result).toLocaleString()}`;
+        else retEl.textContent = `$${result.toFixed(0)}`;
       }
     });
   }
+
+  tfChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      tfChips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      currentTf = chip.dataset.tf;
+      update();
+    });
+  });
 
   input.addEventListener('input', update);
   update();
