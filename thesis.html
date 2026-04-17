@@ -472,29 +472,31 @@
   <h3>TVL to valuation (DCF + comparable P/E)</h3>
   <p>The valuation formula: <strong>TVL × 0.5% × 12 × 60% × 25 = FDV</strong>. Simplified: <strong>FDV = TVL × 0.9</strong>. Revenue efficiency (0.5%) is the average during Peapods' TVL run-up. P/E (25×) is the median of DeFi cashflow tokens. One variable: TVL.</p>
   <table class="drawer-table">
-    <thead><tr><th>Input</th><th>Bearish</th><th>Conservative</th><th>Base</th><th>Bullish</th></tr></thead>
+    <thead><tr><th>Input</th><th>Value</th><th>Source</th></tr></thead>
     <tbody>
-      <tr><td>Rev/TVL (monthly)</td><td>0.50%</td><td>0.50%</td><td>0.50%</td><td>0.50%</td></tr>
-      <tr><td>P/E (6/12mo)</td><td>10×</td><td>20×</td><td>30×</td><td>50×</td></tr>
-      <tr><td>P/E (24mo, compressed)</td><td>10×</td><td>20×</td><td>25×</td><td>35×</td></tr>
+      <tr><td>Rev/TVL (monthly)</td><td>0.50%</td><td>Average during Peapods' TVL run-up (range: 0.30-0.75%)</td></tr>
+      <tr><td>P/E multiple</td><td>25×</td><td>Median of DeFi cashflow tokens (see below)</td></tr>
+      <tr><td>Buyback share</td><td>60%</td><td>Protocol design (Act 3)</td></tr>
+      <tr><td><strong>Simplified</strong></td><td><strong>FDV = TVL × 0.9</strong></td><td>One variable: TVL</td></tr>
     </tbody>
   </table>
 
-  <h4>P/E anchored to DeFi cashflow tokens (DefiLlama, April 2026)</h4>
+  <h4>Why 25× P/E? (DeFi cashflow tokens, DefiLlama April 2026)</h4>
   <table class="drawer-table">
-    <thead><tr><th>Protocol</th><th>P/E (FDV)</th><th>Cashflow mechanism</th><th>Maps to</th></tr></thead>
+    <thead><tr><th>Protocol</th><th>P/E (FDV)</th><th>Cashflow mechanism</th></tr></thead>
     <tbody>
-      <tr><td>GMX</td><td>7.6×</td><td>30% fees → stakers as ETH/AVAX</td><td rowspan="2">Bearish (10×)</td></tr>
+      <tr><td>GMX</td><td>7.6×</td><td>30% fees → stakers as ETH/AVAX</td></tr>
       <tr><td>Sky (MakerDAO)</td><td>10.3×</td><td>Smart Burn Engine → buyback + burn</td></tr>
-      <tr><td>Maple</td><td>15.9×</td><td>SYRUP staking earns protocol fees</td><td rowspan="2">Conservative (20×)</td></tr>
+      <tr><td>Maple</td><td>15.9×</td><td>SYRUP staking earns protocol fees</td></tr>
       <tr><td>Aave</td><td>23.5×</td><td>Reserve factor + AAVE buyback program</td></tr>
-      <tr><td>Jupiter</td><td>30.5×</td><td>Active Staking Rewards to JUP stakers</td><td rowspan="2">Base (30×)</td></tr>
+      <tr><td><strong>→ Median</strong></td><td><strong>~25×</strong></td><td><strong>Used in our model</strong></td></tr>
+      <tr><td>Jupiter</td><td>30.5×</td><td>Active Staking Rewards to JUP stakers</td></tr>
       <tr><td>dYdX V4</td><td>32.8×</td><td>Trading fees → DYDX stakers in USDC</td></tr>
-      <tr><td>Pendle</td><td>43.7×</td><td>Yield fees → vePENDLE lockers</td><td rowspan="2">Bullish (50×)</td></tr>
+      <tr><td>Pendle</td><td>43.7×</td><td>Yield fees → vePENDLE lockers</td></tr>
       <tr><td>Hyperliquid</td><td>67.1×</td><td>Buyback + burn from assistance fund</td></tr>
     </tbody>
   </table>
-  <p><strong>Rev/TVL:</strong> flat 0.5% monthly across all scenarios (the average during Peapods' TVL run-up; historical range 0.30-0.75%). <strong>P/E:</strong> flat 25× across all scenarios (median of DeFi cashflow tokens). <strong>Simplified: FDV = TVL × 0.9.</strong> One variable: TVL. Strats' 60% buyback is among the highest revenue-share rates in DeFi.</p>
+  <p>We use a flat 25× for all scenarios. This sits between Aave (23.5×) and Jupiter (30.5×), right at the median of DeFi protocols that actually share revenue with token holders. Strats' 60% buyback is among the highest revenue-share rates in DeFi, comparable to GMX's 30% and stronger than most.</p>
 
   <h3>The valuation grid</h3>
   <table class="drawer-table">
@@ -507,6 +509,10 @@
     </tbody>
   </table>
 
+  <h3>The risk-adjusted case</h3>
+  <p>Even the bearish case (Peapods' proven rate, nothing improves) produces a 29× from today's PEAS price. The conservative case is 104×. At 24 months, every scenario above bearish exceeds 100×. The floor isn't zero. It's what the same team already proved with a worse product.</p>
+  <p>Compare: ETH might 2-3× in a bull cycle. BTC might 2×. A narrative altcoin might 10×. A pre-launch protocol with a proven revenue engine has a 29× floor. The risk/reward is structurally different from almost anything else at this price level.</p>
+
   <h3>What would break the thesis</h3>
   <ul>
     <li><strong>Smart contract exploit.</strong> TVL goes to near-zero. Catastrophic tail risk inherent to all DeFi.</li>
@@ -514,7 +520,7 @@
     <li><strong>Competitive product launch.</strong> A major protocol ships an identical product with better distribution.</li>
     <li><strong>Team execution failure.</strong> Pod expansion stalls. Bugs go unfixed. Community loses confidence.</li>
   </ul>
-  <p>Each risk is monitorable within weeks of launch.</p>
+  <p>Each risk is monitorable within weeks of launch. If month-3 TVL is tracking bearish or below, you have data to act on.</p>
 
   <h3>Data sources</h3>
   <ul>
