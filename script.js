@@ -6,14 +6,14 @@
 // TOOL I — STRATEGY CALCULATOR
 // ====================================================================
 const STRATEGIES = [
-  { key: 'spot',       short: 'Spot',        fn: k => k,                       color: '#7A6650', dashed: true },
-  { key: 'linear2x',   short: '2× Linear',   fn: k => 2 * k - 1,               color: '#8B2A1E', dashed: true, canLiquidate: true },
-  { key: 'eth_plus',   short: 'ETH+',        fn: k => k,                       color: '#2C4870' },
-  { key: 'super_eth',  short: 'SuperETH+',   fn: k => 0.5 * k * k + 0.5,       color: '#5D6B3E' },
-  { key: 'long_eth',   short: 'LongETH+',    fn: k => k * k,                   color: '#3F5424' },
-  { key: 'eth_usdc',   short: 'ETH_USDC+',   fn: k => 1 / k,                   color: '#8E5C9A' },
-  { key: 'super_usdc', short: 'SuperUSDC+',  fn: k => 0.5 / (k * k) + 0.5 * k, color: '#B53A2A' },
-  { key: 'long_usdc',  short: 'LongUSDC+',   fn: k => 1 / (k * k),             color: '#8B2A1E' },
+  { key: 'spot',       short: 'Spot',        fn: k => k,                       color: '#9CA3AF', dashed: true },
+  { key: 'linear2x',   short: '2× Linear',   fn: k => 2 * k - 1,               color: '#FF3D00', dashed: true, canLiquidate: true },
+  { key: 'eth_plus',   short: 'ETH+',        fn: k => k,                       color: '#3B82F6' },
+  { key: 'super_eth',  short: 'SuperETH+',   fn: k => 0.5 * k * k + 0.5,       color: '#0066FF' },
+  { key: 'long_eth',   short: 'LongETH+',    fn: k => k * k,                   color: '#0052CC' },
+  { key: 'eth_usdc',   short: 'ETH_USDC+',   fn: k => 1 / k,                   color: '#8B5CF6' },
+  { key: 'super_usdc', short: 'SuperUSDC+',  fn: k => 0.5 / (k * k) + 0.5 * k, color: '#00C853' },
+  { key: 'long_usdc',  short: 'LongUSDC+',   fn: k => 1 / (k * k),             color: '#059669' },
 ];
 
 const calcState = {
@@ -99,25 +99,25 @@ function renderChart() {
     const yy = yScale(y);
     const isZero = y === 0;
     parts.push(`<line x1="${PAD.l}" y1="${yy}" x2="${W - PAD.r}" y2="${yy}"
-      stroke="${isZero ? '#7A6650' : '#A8895C'}" stroke-width="${isZero ? 1.2 : 0.5}"
+      stroke="${isZero ? '#6B7280' : '#D1D9E0'}" stroke-width="${isZero ? 1.2 : 0.5}"
       stroke-dasharray="${isZero ? '0' : '1,3'}" />`);
     parts.push(`<text x="${PAD.l - 6}" y="${yy + 3}" text-anchor="end"
-      font-family="JetBrains Mono, monospace" font-size="9" fill="#7A6650" font-weight="600">${y >= 0 ? '+' : ''}${y}%</text>`);
+      font-family="JetBrains Mono, monospace" font-size="9" fill="#6B7280" font-weight="600">${y >= 0 ? '+' : ''}${y}%</text>`);
   });
 
   [0.5, 1, 1.5, 2, 2.5, 3].forEach(x => {
     const xx = xScale(x);
     const isOne = x === 1;
     parts.push(`<line x1="${xx}" y1="${PAD.t}" x2="${xx}" y2="${H - PAD.b}"
-      stroke="${isOne ? '#7A6650' : '#A8895C'}" stroke-width="${isOne ? 1.2 : 0.5}"
+      stroke="${isOne ? '#6B7280' : '#D1D9E0'}" stroke-width="${isOne ? 1.2 : 0.5}"
       stroke-dasharray="${isOne ? '0' : '1,3'}" />`);
     const lbl = x === 1 ? 'flat' : `${x > 1 ? '+' : ''}${((x - 1) * 100).toFixed(0)}%`;
     parts.push(`<text x="${xx}" y="${H - PAD.b + 14}" text-anchor="middle"
-      font-family="JetBrains Mono, monospace" font-size="9" fill="#7A6650" font-weight="600">${lbl}</text>`);
+      font-family="JetBrains Mono, monospace" font-size="9" fill="#6B7280" font-weight="600">${lbl}</text>`);
   });
 
   parts.push(`<text x="${PAD.l + innerW / 2}" y="${H - 4}" text-anchor="middle"
-    font-family="Instrument Serif, serif" font-size="11" font-style="italic" fill="#44362A">${calcState.asset} change from your cost</text>`);
+    font-family="Instrument Serif, serif" font-size="11" font-style="italic" fill="#3D3D5C">${calcState.asset} change from your cost</text>`);
 
   const winner = getWinnerKey();
   const samples = 220;
@@ -135,9 +135,9 @@ function renderChart() {
         if (s.canLiquidate && mult <= 0) {
           if (started) {
             const xx = xScale(k);
-            parts.push(`<circle cx="${xx}" cy="${yScale(yMin)}" r="5" fill="#B53A2A" stroke="#FAF2D8" stroke-width="2" />`);
+            parts.push(`<circle cx="${xx}" cy="${yScale(yMin)}" r="5" fill="#FF3D00" stroke="#FFFFFF" stroke-width="2" />`);
             parts.push(`<text x="${xx}" y="${yScale(yMin) - 10}" text-anchor="middle"
-              font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#B53A2A" letter-spacing="0.05em">LIQUIDATED</text>`);
+              font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#FF3D00" letter-spacing="0.05em">LIQUIDATED</text>`);
           }
           started = false;
           continue;
@@ -167,9 +167,9 @@ function renderChart() {
   if (k >= kMin && k <= kMax) {
     const xx = xScale(k);
     parts.push(`<line x1="${xx}" y1="${PAD.t}" x2="${xx}" y2="${H - PAD.b}"
-      stroke="#1E1611" stroke-width="1.4" />`);
+      stroke="#1A1A2E" stroke-width="1.4" />`);
     parts.push(`<text x="${xx}" y="${PAD.t - 6}" text-anchor="middle"
-      font-family="Instrument Serif, serif" font-style="italic" font-size="11" font-weight="500" fill="#1E1611">target</text>`);
+      font-family="Instrument Serif, serif" font-style="italic" font-size="11" font-weight="500" fill="#1A1A2E">target</text>`);
     STRATEGIES.forEach(s => {
       if (!calcState.visible.has(s.key)) return;
       const mult = s.fn(k);
@@ -178,7 +178,7 @@ function renderChart() {
       if (s.canLiquidate && mult <= 0) return;
       const isWinner = s.key === winner;
       const r = isWinner ? 4.5 : 3.5;
-      parts.push(`<circle cx="${xx}" cy="${yScale(ret)}" r="${r}" fill="${s.color}" stroke="#FAF2D8" stroke-width="1.6" />`);
+      parts.push(`<circle cx="${xx}" cy="${yScale(ret)}" r="${r}" fill="${s.color}" stroke="#FFFFFF" stroke-width="1.6" />`);
     });
   }
 

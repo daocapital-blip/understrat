@@ -2,3 +2,5 @@
 Thumbs.db
 *.md
 !README.md
+
+.vercel
