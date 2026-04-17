@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>underrated.fi · act 2 · the protocol — the machine that already printed</title>
+<meta name="description" content="Act 2 of an independent thesis on StratsFi. The receipt: what v3 already earned, plus an interactive TAM capture simulator showing the growth path." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="protocol">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="stamp-rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="2" />
+      <feDisplacementMap in="SourceGraphic" scale="1.3" />
+      <feComponentTransfer><feFuncA type="linear" slope="0.88"/></feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="masthead">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">◐</span>
+    <span class="brand-text">underrated<span class="brand-dot">.</span>fi</span>
+    <span class="brand-meta">— a fansite · filed pre-launch</span>
+  </a>
+
+  <nav class="acts-nav">
+    <a href="index.html" class="act-tab"><span class="act-num">1</span>the product</a>
+    <a href="protocol.html" class="act-tab act-tab-current"><span class="act-num">2</span>the protocol</a>
+    <a href="token.html" class="act-tab"><span class="act-num">3</span>the token</a>
+    <a href="thesis.html" class="act-tab"><span class="act-num">4</span>the thesis</a>
+  </nav>
+
+  <div class="header-right">
+    <a href="thesis.html" class="edge-btn" style="opacity:1;cursor:pointer;">skip to thesis →</a>
+  </div>
+</header>
+
+<div class="rail" aria-hidden="true">
+  <div class="rail-fill" id="rail-fill"></div>
+</div>
+
+<main id="top">
+
+  <nav class="act-breadcrumb-bar">
+    <a href="index.html">← act 1 · the product</a>
+    <span class="crumb-kicker">act 2 · the protocol</span>
+  </nav>
+
+  <section class="receipt receipt-act" id="receipt">
+    <span class="stamp stamp-floating stamp-red stamp-chapter">ON RECORD</span>
+    <div class="receipt-tag">Act 2 · part 1 · the track record</div>
+    <h3 class="receipt-title">
+      Proven PMF. <em>Proven revenue.</em>
+    </h3>
+
+    <div class="receipt-row">
+      <div class="stat">
+        <span class="stat-num">$644K</span>
+        <span class="stat-lbl">monthly revenue · Peapods peak</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">$105M</span>
+        <span class="stat-lbl">peak TVL · Oct 2025</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">0.75%</span>
+        <span class="stat-lbl">rev / TVL · <em>among the best in DeFi</em></span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">up to 37.5×</span>
+        <span class="stat-lbl">more efficient than bluechip DeFi</span>
+      </div>
+    </div>
+
+    <div class="receipt-row receipt-secondary">
+      <div class="stat-line">
+        <span class="stat-k">top 15</span> by revenue across the entire Ethereum ecosystem at ~$100M TVL
+      </div>
+      <div class="stat-line">
+        <span class="stat-k">top 10</span> in DeFi by annual holder revenue at peak
+      </div>
+      <div class="stat-line">
+        <span class="stat-k">led DeFi</span> stable-lending yields for entire stretches
+      </div>
+    </div>
+
+    <p class="receipt-note">
+      This team already built something that worked. With Peapods, they shipped continuously through two bear markets and never pivoted to AI, memes, or whatever narrative trended. They earned #1 revenue-per-TVL in all of DeFi on organic fee revenue alone, no emissions, no paid user acquisition. Previously audited by <strong>Pashov</strong>. Strats will undergo new audits before launch. The team is publicly anonymous but has years of visible on-chain execution, which means very low rug risk. Strats is their biggest upgrade yet.
+    </p>
+
+    <p class="receipt-note receipt-note-bridge">
+      TVL dropped to <strong>~$5M</strong> after a leverage crisis (users over-levered, cascade followed). The fee engine never stopped working. What broke was the manual leverage layer. Strats replaces it with automated rebalancing.
+    </p>
+
+    <p class="receipt-note">
+      <strong>The mispricing:</strong> the fee engine that generated $644K/month is the same one powering Strats. Comparable DeFi cashflow protocols trade at 10-43× annual revenue. At 25× on peak revenue alone, the implied valuation is $192M. PEAS trades at $4.8M. That's a 97.5% discount to what the same revenue engine was worth.
+    </p>
+  </section>
+
+  <section class="act act-tam">
+    <div class="act-head">
+      <span class="act-label"><span class="act-roman">Act 2 · part 2</span> · where the growth comes from</span>
+      <h2 class="act-title">
+        $105M TVL with one product. <em>Six markets worth ~$199B ahead.</em>
+      </h2>
+      <p class="act-deck">
+        Peapods hit <strong>$105M TVL</strong> with one product. Strats opens six markets worth ~$199B. Same revenue engine. Better product. Wider reach.
+      </p>
+    </div>
+
+    <div class="key-points">
+      <div class="key-points-head">
+        <div class="key-points-titles">
+          <span class="key-points-label">six markets Strats opens up</span>
+          <span class="key-points-sub">each with a specific upgrade on what users have today</span>
+        </div>
+      </div>
+      <ol class="key-list key-list-segmented">
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Long-tail token holders</h4>
+            <span class="seg-tam">$30B+ in tokens earning nothing today</span>
+          </header>
+          <p class="seg-body">Holders of memecoins, small-cap tokens, and new launches currently earn nothing on their positions. Every new Strats pod turns an idle token into a <span class="spec">yield-generating asset</span>, a <span class="spec">leveraged financial instrument</span>, and <span class="spec">borrowing collateral</span>. This was Peapods' original PMF: volatile-token pods generating 100-300% APY from real trading activity at $105M TVL.</p>
+          <p class="seg-kicker">From zero utility to yield, leverage, and borrowing. On any token that gets a pod.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Perp DEX refugees</h4>
+            <span class="seg-tam">$2.5B TVL in decentralised derivatives</span>
+          </header>
+          <p class="seg-body">Everyone wants directional leverage. Nobody wants to get liquidated or bled by funding. Strats delivers the same directional bet with <span class="spec">no liquidation cliff</span>, <span class="spec">no funding decay</span>, and <span class="spec">returns that accelerate the more you're right</span>, plus triple-digit APY from real trading fees while the position sits.</p>
+          <p class="seg-kicker">Perps charge you to speculate. Strats pays you.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Stable yield seekers</h4>
+            <span class="seg-tam">~$20B across stablecoin yield products</span>
+          </header>
+          <p class="seg-body">Ethena peaked at $14B TVL providing yield-bearing stablecoins. Returns have compressed to 3-4% as the category matures. Strats offers stable USDC exposure with competitive real yield, plus optional asymmetric upside that wins in both directions.</p>
+          <p class="seg-kicker">Same use case. Better yield. Optional upside.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Passive DeFi savers</h4>
+            <span class="seg-tam">$52.5B in lending protocols at 3-5% APY</span>
+          </header>
+          <p class="seg-body">$52.5B of deposits accept 3-5% APY because it feels safe. Strats' lending pools (called Metavaults) deliver multiples of that yield with insurance fund protection. Deposit USDC or ETH, earn from pod trading fees.</p>
+          <p class="seg-kicker">Same safety logic. Multiples of the return.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">ETH + LST yield stackers</h4>
+            <span class="seg-tam">$66.6B in liquid staking + restaking</span>
+          </header>
+          <p class="seg-body">Holders don't pick between staking yield and DeFi yield. They stack both. Same wstETH earning Lido rewards <span class="spec">and</span> competitive real yield from Strats pod fees on top.</p>
+          <p class="seg-kicker">Native staking yield plus real trading-fee yield. Stacked.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Onchain RWAs + traditional assets</h4>
+            <span class="seg-tam">$27.1B · projected $100B+ by end-2026</span>
+          </header>
+          <p class="seg-body">As more assets move onchain (stocks, commodities, treasuries, real estate), Strats enables entirely new financial products on top of them. Investors can earn yield on volatility, apply leverage more efficiently, and extract liquidity without selling. This expands Strats beyond crypto into a broader financial layer.</p>
+          <p class="seg-kicker">New financial products on every asset that moves onchain.</p>
+        </li>
+      </ol>
+    </div>
+
+    <div class="tool tool-tam">
+      <div class="tool-header">
+        <span class="tool-label">Tool · the TAM capture simulator</span>
+        <span class="tool-sub">what's Strats' TVL if it captures X% of each segment? drag the sliders to find out</span>
+      </div>
+
+      <div class="tam">
+        <div class="tam-presets">
+          <span class="chips-label">presets —</span>
+          <button class="chip" type="button" data-preset="bearish">bearish</button>
+          <button class="chip" type="button" data-preset="conservative">conservative</button>
+          <button class="chip" type="button" data-preset="base">base</button>
+          <button class="chip" type="button" data-preset="bullish">bullish</button>
+          <button class="chip" type="button" data-preset="clear">clear</button>
+        </div>
+
+        <div class="tam-segments" id="tam-segments">
+          <!-- segments injected by JS -->
+        </div>
+
+        <div class="tam-total">
+          <div class="tam-total-main">
+            <span class="tam-total-lbl">total new TVL captured</span>
+            <span class="tam-total-val" id="tam-total-val">$0</span>
+          </div>
+        </div>
+
+        <p class="caveat">
+          TAM sizes from DefiLlama (April 2026) except where noted. Even a small capture across each segment compounds into a top-tier protocol. More detail on TVL assumptions and scenarios in Act 4.
+        </p>
+      </div>
+    </div>
+
+    <div class="next-act">
+      <div class="next-act-text">
+        <span class="next-act-label">next — act 3 · the token</span>
+        <p>
+          Protocol growth is one thing. Whether holders capture it is another. 60% of every revenue dollar flows back to $STRATS holders. Act 3 shows how.
+        </p>
+      </div>
+      <a href="token.html" class="next-act-cta">
+        <span>the token →</span>
+        <span class="next-act-sub">the alignment</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <p class="foot-disclaimer">
+        <strong>not investment advice.</strong> an independent fansite. written by one anonymous DeFi user. not affiliated with StratsFi / Peapods. filed pre-launch, Apr 2026.
+      </p>
+      <p class="foot-links">
+        <a href="index.html">← act 1 · the product</a>
+        · <a href="token.html">act 3 · the token →</a>
+        · <a href="thesis.html">act 4 · the thesis →</a>
+      </p>
+    </div>
+  </footer>
+
+<button class="floating-dive open-drawer" type="button" data-drawer="drawer-act-2" aria-label="Open deep dive">
+  <span class="floating-dive-icon">❂</span>
+  <span class="floating-dive-label">deep dive</span>
+</button>
+
+</main>
+
+<div class="memo-backdrop" id="drawer-backdrop" hidden></div>
+<div class="memo-wrap" id="drawer" aria-hidden="true" role="dialog" aria-modal="true">
+  <article class="memo">
+    <header class="memo-letterhead">
+      <div class="memo-letterhead-row">
+        <span class="memo-mark">◐</span>
+        <span class="memo-brand">underrated<span class="memo-dot">.</span>fi <span class="memo-sub-brand">— deep dive</span></span>
+        <button class="memo-close" id="drawer-close" aria-label="Close memo">×</button>
+      </div>
+      <div class="memo-meta">
+        <div class="memo-meta-row"><span class="memo-meta-lbl">Re</span><span class="memo-meta-val" id="drawer-tag">an enclosure</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">From</span><span class="memo-meta-val">u.fi · anonymous DeFi user</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">Date</span><span class="memo-meta-val">April 2026 · pre-launch</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">File</span><span class="memo-meta-val">No. 04 / 26 · classified</span></div>
+      </div>
+    </header>
+    <div class="memo-body" id="drawer-body"></div>
+    <footer class="memo-foot">
+      <span class="memo-foot-stamp">end of memo · u.fi</span>
+    </footer>
+  </article>
+</div>
+
+<template id="drawer-act-2">
+  <header class="drawer-title-block">
+    <span class="drawer-label">Act 2 · full argument</span>
+    <h2 class="drawer-title">A proven product. A $199B market still to serve.</h2>
+    <p class="drawer-deck">Peapods proved real retail demand exists for leveraged LP / LVF products at scale, with DeFi-leading revenue efficiency. Strats ships the same proven product dramatically better, covers every market direction so growth no longer depends on a specific regime, and extends reach from one user type to six segments totalling ~$199B of DefiLlama-verified addressable market.</p>
+  </header>
+
+  <h3>Part A · the product works (and the demand is real)</h3>
+  <p>Peapods proved two things at scale that most DeFi protocols never prove. First, the leveraged LP / LVF (leveraged volatility farming) category has real retail demand: <strong>$105M of TVL</strong> at peak. Not a survey. Not a whitepaper claim. Real users. Real capital. Second, the fee engine built around that demand generates <strong>DeFi-leading revenue efficiency</strong>. Under real market conditions. Through two bear markets. Zero token emissions subsidising the yield.</p>
+  <table class="drawer-table">
+    <thead><tr><th>Metric</th><th>Value (Peapods peak, Oct 2025)</th></tr></thead>
+    <tbody>
+      <tr><td>Peak TVL</td><td>$105M</td></tr>
+      <tr><td>Monthly revenue at peak</td><td>$644K (~$7.7M annualised)</td></tr>
+      <tr><td><strong>Revenue / TVL</strong></td><td><strong>0.75% monthly · among the top in DeFi</strong></td></tr>
+      <tr><td>Ecosystem ranking</td><td>Top 15 by revenue across all of Ethereum</td></tr>
+      <tr><td>DeFi ranking (holder revenue)</td><td>Top 10 at peak</td></tr>
+      <tr><td>Stable-lending yield leadership</td><td>Led DeFi for entire stretches</td></tr>
+      <tr><td>Volatile pod APYs</td><td>100–300% sustained · real trading-fee yield, no emissions</td></tr>
+    </tbody>
+  </table>
+
+  <h4>The efficiency comparison</h4>
+  <p>Revenue/TVL is the cleanest measure of product-market fit in DeFi: how much fee revenue each dollar of deposited capital generates per month. It strips away narrative, token price, and emissions and asks a simple question: <em>are users actually paying to use this?</em> Peapods led the table at peak, and it wasn't close:</p>
+  <table class="drawer-table">
+    <thead><tr><th>Protocol</th><th>Rev / TVL (monthly)</th><th>Peapods was more efficient by</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Peapods</strong></td><td><strong>0.75%</strong></td><td>—</td></tr>
+      <tr><td>Sky (Maker)</td><td>0.30%</td><td>2.5×</td></tr>
+      <tr><td>Pendle</td><td>0.09%</td><td>8.3×</td></tr>
+      <tr><td>Uniswap</td><td>0.08%</td><td>9.4×</td></tr>
+      <tr><td>Maple</td><td>0.04%</td><td>18.8×</td></tr>
+      <tr><td>Aave</td><td>0.02%</td><td><strong>37.5×</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Up to <strong>37.5× more revenue per dollar of TVL</strong> than most bluechip DeFi protocols. Proven, not projected.</p>
+
+  <h4>The team</h4>
+  <p>Years of grinding through bull and bear. Shipped continuously while 95% of competitors quit, pivoted to AI, or died. Self-funded their own audits, not from a treasury, not from VCs, not from a token sale. Never chased a trending narrative. Across multiple cycles, this team has built a quietly trusted reputation in DeFi: publicly active, transparent about what they're building, respected by builders and operators who notice the difference between teams that actually ship and teams that just market. They've been around long enough, and delivered consistently enough, that their name carries weight with the serious capital allocators who've been watching this space since the last cycle. The kind of operator track record institutional allocators look for and rarely find.</p>
+
+  <h3>Part B · the honest current-state read</h3>
+  <p>TVL sits at ~$5M today (April 2026), down from the $105M Peapods peak. The drawdown wasn't a product failure or a demand failure. It was a <strong>liquidation cascade on a narrow leverage primitive</strong>:</p>
+  <ul>
+    <li>Users over-levered and over-borrowed, triggering a cascade that wiped out leveraged positions and pulled TVL down fast</li>
+    <li>The underlying fee engine kept running throughout. The revenue mechanics weren't the failure mode; the manual-management leverage primitive was</li>
+    <li>Metavault lenders were protected throughout by the insurance fund and got their capital back in full</li>
+    <li>Strats rebuilds the product from scratch with continuous automated rebalancing, eliminating the exact failure mode that caused the cascade, alongside a wide range of other improvements and innovations</li>
+  </ul>
+
+  <h3>Part C · what capped Peapods' reach</h3>
+  <p>Peapods served one specific user well: a crypto-native DeFi power user, comfortable with LVF mechanics, hunting yield on a leveraged LP position in a volatile token. That audience existed. The product was designed for them. $105M of TVL showed up.</p>
+  <p>Metavaults also served passive savers well, even leading DeFi stable-lending yields for long stretches at smaller scale. But regular DeFi users, stable yield seekers, LST stackers, bearish users, and institutional capital had no product at all. Three structural gaps kept them out:</p>
+  <ol>
+    <li><strong>Long-only, directional-only.</strong> Peapods only supported leveraged long exposure on volatile tokens. That cut out the entire $20B+ stable-yield cohort (Ethena, Pendle stable pools, yield-bearing stablecoins), every bearish trader wanting hedges, and every portfolio manager needing neutral positions to balance risk. Multi-billion-dollar segments gated out at the product layer.</li>
+    <li><strong>Rough UI/UX.</strong> Earnings were hard to track on active positions. Payoffs were hard to preview before entering. The interface assumed LVF fluency most retail didn't have. The result: only crypto-native power users made it past the first screen. Mainstream DeFi users and mass retail stayed out.</li>
+    <li><strong>Manual management with limited guardrails.</strong> Users had to monitor positions and defend against liquidation as effective leverage crept up in drawdowns (LP value doesn't fall 1:1 with the underlying, but debt stays constant). For anyone risk-averse or unfamiliar with the mechanic, that complexity alone was enough to keep them away from the product.</li>
+  </ol>
+  <p>And even $105M was probably an undercount of what the narrow product could have reached. The cascade cut growth short just as usage was climbing. The six months since have been among the worst environments for long-only leveraged products in DeFi: compressed volatility, sideways-to-down prices, retail cycling out of directional bets. In a bull regime, Peapods would almost certainly have grown materially further before hitting its structural ceilings.</p>
+  <p>With Strats, regime-dependence disappears entirely. Long, short, and neutral strategies all sit on the same engine, so growth no longer requires a specific market direction. And all three gaps above get fixed simultaneously, on the same fee mechanics that already hit top-tier revenue efficiency in DeFi.</p>
+
+  <h3>Part D · one product became six, one audience becomes five</h3>
+  <p>Peapods offered one narrow product. Each Strats pod ships six strategies, covering every directional stance a user might take:</p>
+  <table class="drawer-table">
+    <thead><tr><th>Strategy</th><th>Role in the portfolio</th><th>Max loss</th></tr></thead>
+    <tbody>
+      <tr><td><code>ETH+</code></td><td>Spot-equivalent ETH exposure plus real yield</td><td>100%</td></tr>
+      <tr><td><code>SuperETH+</code></td><td>Convex long on ETH with a built-in 50% downside floor</td><td><strong>50%</strong></td></tr>
+      <tr><td><code>longETH+</code></td><td>Max convex long on ETH, no floor</td><td>100%</td></tr>
+      <tr><td><code>ETH_USDC+</code></td><td>Approximately flat USDC position plus real yield</td><td>100%</td></tr>
+      <tr><td><code>SuperUSDC+</code></td><td>Convex short with ETH cashback upside — wins on both sides</td><td><strong>~5.5%</strong></td></tr>
+      <tr><td><code>longUSDC+</code></td><td>Max convex short, no floor</td><td>100%</td></tr>
+    </tbody>
+  </table>
+  <p>The cashback tiers (<code>SuperETH+</code>, <code>SuperUSDC+</code>) cap maximum loss at 50% and ~5.5% respectively, structures that exist nowhere else in DeFi at retail minimums. Each of the six strategies maps to a specific user segment Peapods structurally couldn't serve. Five multi-billion-dollar markets, each with a concrete upgrade on what users currently use elsewhere:</p>
+
+  <h4>1. Perp DEX refugees: $2.5B TVL (DefiLlama Derivatives category)</h4>
+  <p>The DefiLlama Derivatives category holds <strong>$2.5B in TVL</strong> across 403 protocols: Hyperliquid HLP ($403M), GMX V2 ($264M), Derive ($117M), dYdX V4 ($108M), and hundreds of smaller protocols. The category is small by TVL because perps are capital-efficient, but the users are exactly the audience Strats serves: directional traders who want leverage.</p>
+  <p><strong>User's pain:</strong> pays funding, faces the liquidation cliff, gets linear upside (4x leverage means 4x gain capped by 4x loss).</p>
+  <p><strong>Strats' answer:</strong> same directional leverage with no liquidation cliff (automated rebalancing), no funding decay (position earns yield while sitting), and convex upside (k² for longs amplifies gains). Plus triple-digit APY from real trading fees on volatile pods.</p>
+  <p>A 2–5% capture = <strong>$50M–125M</strong> of new TVL.</p>
+
+  <h4>2. Stable yield seekers: ~$20B (DefiLlama Basis Trading $9.6B + LP farming + delta-neutral)</h4>
+  <p>DefiLlama's Basis Trading category holds <strong>$9.6B</strong> (Ethena USDe at $5.8B is 61% of it). Beyond basis trades, similar demand sits across Pendle stable-asset pools, Ondo USDY, Mountain USDM, LP farming, and delta-neutral strategies across CEXes and DEXes. Total addressable demand for "dollar exposure with real yield" sits at ~$20B and growing.</p>
+  <p><strong>User's pain:</strong> users want a stable, dollar-denominated asset that pays competitive yield. Ethena proved the appetite at $14B TVL, but sUSDe APY has compressed from historical 19% peaks to ~3.5–4% today. Every alternative in this category faces similar yield compression as capital crowds in.</p>
+  <p><strong>Strats' answer, two paths:</strong></p>
+  <ul>
+    <li><code>USDC+</code>: approximately flat USDC exposure with competitive real yield sourced from pod fees, lending interest, and AMM arbitrage. Direct alternative to yield-bearing stablecoins, sourced from a different yield engine (real trading activity) that doesn't compress the same way.</li>
+    <li><code>SuperUSDC+</code>: adds a structural payoff asymmetry. Full payoff is <em>½I·k⁻² + ½I·k</em>. <strong>+4,905% upside if ETH crashes 90%, capped -5.5% worst case at ETH +26%.</strong> Wins in both directions except a narrow band around ETH +25%.</li>
+  </ul>
+  <p>The SuperUSDC+ structure exists nowhere else in DeFi or TradFi at retail minimums. Even 2% capture = $400M.</p>
+
+  <h4>3. Passive DeFi savers: $52.5B lending TVL (DefiLlama Lending category)</h4>
+  <p>DefiLlama's Lending category holds <strong>$52.5B in TVL</strong> across 601 protocols. Aave V3 leads at $25.6B (49% of category). Morpho $7.5B. Compound V3 $1.4B. Venus $1.2B. Hundreds more.</p>
+  <p><strong>User's pain:</strong> accepts 3–5% APY because it feels safe. Actively seeks yield without risk cliffs.</p>
+  <p><strong>Strats' answer:</strong> <code>Metavaults</code> lend across multiple pods simultaneously on the same risk profile. Peapods already led DeFi stable-lending yields for entire stretches at smaller scale. The Metavault insurance fund backed every Metavault lender through the recent cascade; no Metavault lender lost principal. For users who want more direct exposure, strategy positions offer mid-double-digit on majors and triple-digit on volatile pods, with no liquidation risk.</p>
+  <p>The easiest segment to win. Even 0.5% is <strong>$263M</strong>.</p>
+
+  <h4>4. Token-holder yield seekers: $66.6B (DefiLlama Liquid Staking + Restaking + Liquid Restaking)</h4>
+  <p>DefiLlama Liquid Staking: <strong>$44.5B</strong> across 280 protocols (Lido $22.1B, 50% of category). Restaking: <strong>$14.3B</strong>. Liquid Restaking: <strong>$7.8B</strong>. Combined: <strong>$66.6B</strong> of capital already earning staking yield, constantly shopping for additional layers.</p>
+  <p><strong>User's pain:</strong> already earning native staking yield (3–4% ETH, 5–8% LRT), constantly yield-shopping for stackable layers. Most options sacrifice composability or principal safety.</p>
+  <p><strong>Strats' answer:</strong> stack native staked yield on top of Strats pod fees. Same wstETH earning Lido rewards <em>and</em> competitive real yield from pod trading fees simultaneously (Peapods proved 100–300% APY on volatile pods). The mechanism extends to every LST, LRT, memecoin, and new token that gets a pod.</p>
+  <p>1% capture = <strong>$666M</strong>. This is where the permissionless architecture from Part C compounds: every new token that launches is potentially a new pod on day one.</p>
+
+  <h4>5. Tokenized RWAs + traditional assets: $27.1B today (DefiLlama RWA category)</h4>
+  <p>DefiLlama's RWA category holds <strong>$27.1B in TVL</strong> across 139 protocols. BlackRock BUIDL, Circle USYC, tokenised Treasuries, MakerDAO/Sky RWA vaults. <em>4× growth from $6.6B a year earlier.</em> Projections: $100B+ by end-2026, $2T by 2030 (McKinsey), $30T by 2034 (Standard Chartered).</p>
+  <p><strong>Institutional pain:</strong> tokenised assets sit idle. No hedging, no leverage, no structured payoffs on-chain. Institutional capital can't allocate at scale without those primitives.</p>
+  <p><strong>Strats' answer:</strong> any ERC-20 tokenised asset becomes a Strats pod with all three primitives simultaneously. Leveraged commodities. Hedged stocks. Yield-enhanced treasuries. Structured real estate exposure. Convex private credit. The first DeFi protocol shipping the complete primitive set institutions need.</p>
+  <p>Capture (0.5–2%) = <strong>$136M–542M</strong> on today's base, scaling proportionally with RWA growth. If the RWA wave hits even half of the McKinsey projection, this segment alone is a top-tier DeFi protocol's worth of TVL.</p>
+
+  <h4>6. Long-tail token holders: $30B+ in tokens with zero yield options</h4>
+  <p>Holders of memecoins, small-cap tokens, new launches, and other actively-traded tokens that currently have <strong>zero yield options, zero leverage products, and zero borrowing markets</strong>. They hold for price appreciation, but their positions sit completely idle. No lending market, no yield farm, no leveraged instruments. Nothing.</p>
+  <p><strong>User's pain:</strong> earning nothing on a position they're holding anyway. Can't lever up on their conviction. Can't borrow against their holdings. Every day they hold is a day of zero capital productivity.</p>
+  <p><strong>Strats' answer:</strong> any ERC-20 token can become a pod. The moment a pod goes live, that idle token becomes three things simultaneously: a <strong>yield-generating asset</strong> (100-300% APY from real trading fees, proven at Peapods scale), a <strong>leveraged financial instrument</strong> (long/short/neutral strategies with convex payoffs), and <strong>borrowing collateral</strong> (users can borrow against their pod positions). This was Peapods' original product-market fit, the segment that drove it to $105M TVL. With Strats, the same mechanism ships with better safety (automated rebalancing) and simpler UX.</p>
+  <p><strong>Scaling mechanic:</strong> this segment grows directly with pod count. Each new pod unlocks a new token community. 10 pods at launch, potentially 50-100+ by month 24. The TAM is not fixed. It compounds as the pod whitelist expands.</p>
+  <p>Capture (0.5–2%) = <strong>$150M–600M</strong> on a conservative $30B base, and the base itself grows with every new pod.</p>
+
+  <h3>TAM summary</h3>
+  <table class="drawer-table">
+    <thead><tr><th>Segment</th><th>TAM (April 2026)</th><th>Source</th><th>0.5%</th><th>2%</th></tr></thead>
+    <tbody>
+      <tr><td>Perp DEX refugees</td><td>$2.5B</td><td>DefiLlama Derivatives TVL</td><td>$13M</td><td>$50M</td></tr>
+      <tr><td>Stable yield seekers</td><td>~$20B</td><td>DefiLlama Basis Trading ($9.6B) + LP/delta-neutral est.</td><td>$100M</td><td>$400M</td></tr>
+      <tr><td>Passive DeFi savers</td><td>$52.5B</td><td>DefiLlama Lending TVL</td><td>$263M</td><td>$1.05B</td></tr>
+      <tr><td>Token-holder yield</td><td>$66.6B</td><td>DefiLlama Liquid Staking + Restaking + LRT</td><td>$333M</td><td>$1.33B</td></tr>
+      <tr><td>RWAs + institutional</td><td>$27.1B</td><td>DefiLlama RWA TVL</td><td>$136M</td><td>$542M</td></tr>
+      <tr><td>Long-tail token holders</td><td>$30B+</td><td>Estimated % of non-BTC/ETH/stable market cap</td><td>$150M</td><td>$600M</td></tr>
+      <tr><td><strong>Total TAM</strong></td><td><strong>~$199B</strong></td><td></td><td><strong>~$1B</strong></td><td><strong>~$4B</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h4>Data sourcing</h4>
+  <p>All segment sizes except two are pulled directly from <strong>DefiLlama category TVLs</strong> (api.llama.fi/protocols, April 16 2026). Specifically: Derivatives ($2.5B, 403 protocols), Basis Trading ($9.6B, 36 protocols), Lending ($52.5B, 601 protocols), Liquid Staking ($44.5B, 280 protocols), Restaking ($14.3B), Liquid Restaking ($7.8B), and RWA ($27.1B, 139 protocols). Two segments use broader estimates: Stable yield seekers adds ~$10B in LP farming and delta-neutral activity beyond the $9.6B DefiLlama Basis Trading figure. Long-tail token holders ($30B) is estimated as a percentage of non-BTC/ETH/stablecoin crypto market cap, since these tokens don't have a DefiLlama category. Any reader can verify the DefiLlama numbers at defillama.com/categories.</p>
+
+  <p>Even a defensible 0.5% capture across all six segments produces <strong>~$1B TVL</strong>, materially above Peapods' $105M peak, in a product that now serves segments Peapods structurally couldn't. 2% capture (~$4B) approaches Pendle's historical peak. Note: actual TVL trajectories (with time horizons and scenario weights) live in Act 4. This memo just sizes the <em>addressable opportunity</em>.</p>
+
+  <h3>Part E · composable by design, permissionless by architecture</h3>
+  <p>Strats isn't a walled garden. Strategy tokens are standard <strong>ERC-20</strong>. Supply receipt tokens (strETH, strUSDC) are standard <strong>ERC-4626</strong>. The swap router is discoverable by aggregators (1inch, ODOS), so users can enter strategies through any DEX aggregator. Strategy positions are usable as collateral in other DeFi protocols the moment other protocols integrate them.</p>
+  <p>Combined with the permissionless pod architecture: <strong>any ERC-20 token can get a pod</strong>. Demand for leverage on a new token automatically attracts external suppliers to bootstrap the lending pair, so new pods go productive on day one without waiting for pre-existing liquidity. Every DeFi protocol that integrates strategy tokens becomes a distribution channel for Strats.</p>
+  <p>This matters for TAM durability. Each of the six segments above compounds further as Strats gets integrated elsewhere: an LST holder using strETH as collateral on another lending protocol, a long-tail token holder borrowing against their newly yield-bearing pod position, an RWA issuer wrapping their tokenised asset as a Strats pod, a structured product desk routing size through strategy vaults. Strats becomes infrastructure, not a destination.</p>
+
+  <h3>Comparable scale in mature DeFi</h3>
+  <table class="drawer-table">
+    <thead><tr><th>Protocol</th><th>Peak / current TVL</th><th>Category</th></tr></thead>
+    <tbody>
+      <tr><td>Aave</td><td>$40B current</td><td>Lending (one primitive)</td></tr>
+      <tr><td>Lido</td><td>$32B current</td><td>Liquid staking (one primitive)</td></tr>
+      <tr><td>Hyperliquid</td><td>$27B peak</td><td>Perps (one primitive)</td></tr>
+      <tr><td>EigenLayer</td><td>$16B current</td><td>Restaking (one primitive)</td></tr>
+      <tr><td>Ethena</td><td>$14B peak</td><td>Yield-bearing stablecoin (one primitive)</td></tr>
+      <tr><td>Pendle</td><td>$4B peak</td><td>Yield tokenisation (one primitive)</td></tr>
+      <tr><td><strong>Strats opportunity</strong></td><td><strong>~$4B at 2% TAM capture</strong></td><td><strong>Structured products + leverage + yield across 6 segments</strong></td></tr>
+    </tbody>
+  </table>
+  <p>Every peer above is <em>one primitive at scale</em>. Strats serves six distinct user segments on one engine, backed by a predecessor that already hit top-tier revenue-per-TVL in all of DeFi. The addressable market is there. The team already ran the predecessor at $105M.</p>
+
+  <p class="drawer-pull">The product worked. Real capital, real fees, real yield, proven across two bear markets at top-tier revenue efficiency in DeFi. One narrow product, one narrow audience, in a regime actively hostile to long-only leverage. That was $105M of TVL. Strats ships the same proven engine dramatically better, covers every market direction so growth no longer depends on a specific regime, and extends reach to six segments totalling ~$199B of DefiLlama-verified addressable market. <em>Act 3</em> shows how that growth translates into token value. <em>Act 4</em> models the TVL trajectories.</p>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>

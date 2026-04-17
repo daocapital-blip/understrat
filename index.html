@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>underrated.fi · act 1 · the product — a better DeFi tool you'd actually use</title>
+<meta name="description" content="Act 1 of an independent investment thesis on StratsFi. Start with the product: type your numbers, see why every strategy outperforms spot and linear leverage." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="product">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="stamp-rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="2" />
+      <feDisplacementMap in="SourceGraphic" scale="1.3" />
+      <feComponentTransfer><feFuncA type="linear" slope="0.88"/></feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="masthead">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">◐</span>
+    <span class="brand-text">underrated<span class="brand-dot">.</span>fi</span>
+    <span class="brand-meta">— a fansite · filed pre-launch</span>
+  </a>
+
+  <nav class="acts-nav">
+    <a href="index.html" class="act-tab act-tab-current"><span class="act-num">1</span>the product</a>
+    <a href="protocol.html" class="act-tab"><span class="act-num">2</span>the protocol</a>
+    <a href="token.html" class="act-tab"><span class="act-num">3</span>the token</a>
+    <a href="thesis.html" class="act-tab"><span class="act-num">4</span>the thesis</a>
+  </nav>
+
+  <div class="header-right">
+    <a href="thesis.html" class="edge-btn" style="opacity:1;cursor:pointer;">skip to thesis →</a>
+  </div>
+</header>
+
+<div class="rail" aria-hidden="true">
+  <div class="rail-fill" id="rail-fill"></div>
+</div>
+
+<main id="top">
+
+  <nav class="act-breadcrumb-bar">
+    <span class="crumb-lead">a thesis on StratsFi · filed t-7 from launch</span>
+    <span class="crumb-kicker">act 1 · the product</span>
+  </nav>
+
+  <section class="intro-hero">
+    <span class="stamp stamp-floating stamp-red stamp-1">CONFIDENTIAL</span>
+
+    <div class="hero-grid">
+      <div class="hero-left">
+        <span class="hero-kicker">An independent investment thesis · filed pre-launch</span>
+        <h1 class="hero">
+          The DeFi bluechip nobody's found yet.
+        </h1>
+        <p class="hero-deck">
+          Sounds too good to be true? This thesis is built on verifiable data: a team that already shipped $105M TVL and $7.7M/year in real revenue, a product that outperforms every leveraged instrument in DeFi, and a token where 60% of revenue buys back supply from day one. The grid on the right is math, not marketing. Four acts below show exactly how each number is derived.
+        </p>
+        <div class="hero-cta">
+          <a href="#act-1" class="primary-cta">read the full thesis ↓</a>
+          <a href="thesis.html" class="primary-cta" style="background:var(--ink);color:var(--paper-cream);">skip to the valuation →</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="tool tool-hero">
+          <div class="tool-header">
+            <span class="tool-label">based on the thesis, this is how many multiples</span>
+            <span class="tool-sub">from today's PEAS price (~$0.48) · full methodology in Act 4</span>
+          </div>
+
+          <div class="grid-tool">
+            <div class="grid-wrap">
+              <div class="grid-corner"></div>
+              <div class="grid-col-label">6 months</div>
+              <div class="grid-col-label">12 months</div>
+              <div class="grid-col-label">24 months</div>
+
+              <div class="grid-row-label">bearish</div>
+              <div class="cell cell-static"><span class="cell-mult">13×</span></div>
+              <div class="cell cell-static"><span class="cell-mult">24×</span></div>
+              <div class="cell cell-static"><span class="cell-mult">29×</span></div>
+
+              <div class="grid-row-label">conservative</div>
+              <div class="cell cell-static"><span class="cell-mult">28×</span></div>
+              <div class="cell cell-static"><span class="cell-mult">58×</span></div>
+              <div class="cell cell-static"><span class="cell-mult">104×</span></div>
+
+              <div class="grid-row-label">base</div>
+              <div class="cell cell-base cell-static"><span class="cell-mult">45×</span></div>
+              <div class="cell cell-base cell-static"><span class="cell-mult">112×</span></div>
+              <div class="cell cell-base cell-static"><span class="cell-mult">240×</span></div>
+
+              <div class="grid-row-label">bullish</div>
+              <div class="cell cell-bullish cell-static"><span class="cell-mult">99×</span></div>
+              <div class="cell cell-bullish cell-static"><span class="cell-mult">272×</span></div>
+              <div class="cell cell-bullish cell-flag cell-static"><span class="cell-mult">636×</span></div>
+            </div>
+          </div>
+
+          <p class="caveat">
+            TVL capture rates from 30 DeFi protocols on DefiLlama · revenue efficiency from Peapods' proven range · valued at 25× annual buyback revenue · <a href="thesis.html">see the full methodology →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="act" id="act-1">
+    <div class="act-head">
+      <span class="act-label"><span class="act-roman">Act 1</span> · the product</span>
+      <h2 class="act-title">
+        Leverage that outperforms perps, pays you yield, <em>and can't liquidate you.</em>
+      </h2>
+      <p class="act-deck">
+        Auto-pilot that locks in gains and cuts losses 24/7. Your gains accelerate the more you're right. Real yield from trading activity, not emissions. Six advantages in a single deposit.
+      </p>
+    </div>
+
+    <p class="act-deck">
+      Watch how Strats strategies outperform spot and linear leverage as the market moves. The chart below compares traditional options (spot holding, 2x leveraged long) against Strats strategies on the same price move.
+    </p>
+
+    <div class="tool tool-calc">
+      <div class="tool-header">
+        <span class="tool-label">Tool · the payoff calculator</span>
+        <span class="tool-sub">drag the target price or try the quick scenarios · click any strategy to add it to the chart</span>
+      </div>
+
+      <div class="calc">
+        <div class="scenario-chips" role="group" aria-label="Quick scenarios">
+          <span class="chips-label">try —</span>
+          <button class="chip" type="button" data-scenario="-50">crash −50%</button>
+          <button class="chip" type="button" data-scenario="-10">crab −10%</button>
+          <button class="chip" type="button" data-scenario="50">bull +50%</button>
+          <button class="chip" type="button" data-scenario="200">moon +200%</button>
+        </div>
+
+        <div class="calc-inputs">
+          <div class="input-cell">
+            <label for="asset">asset</label>
+            <select id="asset">
+              <option value="TKN">TKN</option>
+            </select>
+          </div>
+          <div class="input-cell">
+            <label for="cost">your cost ($)</label>
+            <input type="number" id="cost" value="2000" min="1" step="any" inputmode="decimal" />
+          </div>
+          <div class="input-cell">
+            <label for="target">target ($)</label>
+            <input type="number" id="target" value="4000" min="1" step="any" inputmode="decimal" />
+          </div>
+          <div class="input-cell wide">
+            <label for="target-slider">or drag the target</label>
+            <input type="range" id="target-slider" min="0.1" max="3" step="0.01" value="2" />
+          </div>
+        </div>
+
+        <div class="calc-readout" id="calc-readout"></div>
+
+        <div class="chart-frame">
+          <svg id="chart" viewBox="0 0 800 240" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+
+        <div class="toggle-hint">
+          <span>click any strategy to show it on the chart →</span>
+        </div>
+        <div class="result-grid" id="result-grid"></div>
+
+        <p class="caveat">
+          Idealized at target price · excludes fees, rebalance costs, <em>and trading yield</em>, which is expected to more than offset those costs over time. The shape of outcomes, not a backtest.
+        </p>
+      </div>
+    </div>
+
+    <div class="key-points">
+      <div class="key-points-head">
+        <div class="key-points-titles">
+          <span class="key-points-label">what makes this different from anything else in DeFi</span>
+          <span class="key-points-sub">six advantages in a single deposit</span>
+        </div>
+      </div>
+      <ol class="key-list key-list-segmented">
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Every direction covered</h4>
+          </header>
+          <p class="seg-body">Long, short, or neutral on any ERC-20 token. Six strategies per pod. Whatever the market does, there's a position for it.</p>
+          <p class="seg-kicker">One protocol. Every directional view.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Leverage without the liquidation cliff</h4>
+          </header>
+          <p class="seg-body">An auto-pilot continuously adjusts your leverage before it reaches danger. A 2x perp gets liquidated at -50% and you lose everything. A StratsFi position at the same price drop still holds <em>62.5% of your capital</em>. You survive.</p>
+          <p class="seg-kicker">Same leverage. You stay in the trade.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Returns that accelerate the more you're right</h4>
+          </header>
+          <p class="seg-body">Your gains compound faster the further the price moves in your favour. When a token rises 400%, Strats returns <em>+2,400%</em> vs +800% for a 2x perp on the same move. <code>SuperUSDC+</code> gives +4,905% if ETH crashes, with just -5.5% max downside. These are payoff shapes that tradfi sells as structured products to accredited investors. Strats puts them on-chain, with no expiry, no counterparty, and real yield on top.</p>
+          <p class="seg-kicker">More upside. Less downside. Automatically.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Real yield on every position</h4>
+          </header>
+          <p class="seg-body">Lending interest + AMM trading fees + arbitrage revenue. Proven at 100-300% APY on Peapods' most volatile pods. Earnings come from real trading activity, not token emissions.</p>
+          <p class="seg-kicker">Your position earns while it sits.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">4x capital efficiency + cashback</h4>
+          </header>
+          <p class="seg-body">$1 deployed controls a $4 leveraged position. On the flagship strategies (<code>SuperETH+</code>, <code>SuperUSDC+</code>), you get ~50% of your deposit back as liquid cash at entry, deployable anywhere while the position runs.</p>
+          <p class="seg-kicker">Get half your capital back. Keep full exposure.</p>
+        </li>
+        <li>
+          <header class="seg-head">
+            <h4 class="seg-name">Simple to use</h4>
+          </header>
+          <p class="seg-body">Pick a strategy, deposit, done. No manual rebalancing. No funding rates. See your exact payoff at every price before you enter.</p>
+          <p class="seg-kicker">Powerful engine. One-click entry.</p>
+        </li>
+      </ol>
+    </div>
+
+    <p class="tok-note">
+      <span class="tok-note-k">why not just use perps, options, or yield farms?</span>
+      Perps charge funding and liquidate you. Options expire and cost premium. Yield farms print tokens that dilute you. Strats: no funding, no liquidation, no expiry, no dilution. Real yield, cashback, and returns that accelerate in your favour. No existing DeFi product stacks all six in a single position.
+    </p>
+
+    <div class="next-act">
+      <div class="next-act-text">
+        <span class="next-act-label">next — act 2 · the protocol</span>
+        <p>
+          A good product isn't enough. Can the protocol actually grow? Act 2 covers Peapods' proof of product-market fit and the ~$199B market Strats opens up.
+        </p>
+      </div>
+      <a href="protocol.html" class="next-act-cta">
+        <span>the protocol →</span>
+        <span class="next-act-sub">the growth thesis</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <p class="foot-disclaimer">
+        <strong>not investment advice.</strong> an independent fansite. written by one anonymous DeFi user. not affiliated with StratsFi / Peapods. all numbers sourced from the thesis, protocol docs, and DefiLlama. filed pre-launch, Apr 2026.
+      </p>
+      <p class="foot-links">
+        <a href="protocol.html">act 2 · the protocol →</a>
+        · <a href="token.html">act 3 · the token →</a>
+        · <a href="thesis.html">act 4 · the thesis →</a>
+      </p>
+    </div>
+  </footer>
+
+<button class="floating-dive open-drawer" type="button" data-drawer="drawer-act-1" aria-label="Open deep dive">
+  <span class="floating-dive-icon">❂</span>
+  <span class="floating-dive-label">deep dive</span>
+</button>
+
+</main>
+
+<div class="memo-backdrop" id="drawer-backdrop" hidden></div>
+<div class="memo-wrap" id="drawer" aria-hidden="true" role="dialog" aria-modal="true">
+  <article class="memo">
+    <header class="memo-letterhead">
+      <div class="memo-letterhead-row">
+        <span class="memo-mark">◐</span>
+        <span class="memo-brand">underrated<span class="memo-dot">.</span>fi <span class="memo-sub-brand">— deep dive</span></span>
+        <button class="memo-close" id="drawer-close" aria-label="Close memo">×</button>
+      </div>
+      <div class="memo-meta">
+        <div class="memo-meta-row"><span class="memo-meta-lbl">Re</span><span class="memo-meta-val" id="drawer-tag">an enclosure</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">From</span><span class="memo-meta-val">u.fi · anonymous DeFi user</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">Date</span><span class="memo-meta-val">April 2026 · pre-launch</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">File</span><span class="memo-meta-val">No. 04 / 26 · classified</span></div>
+      </div>
+    </header>
+    <div class="memo-body" id="drawer-body"></div>
+    <footer class="memo-foot">
+      <span class="memo-foot-stamp">end of memo · u.fi</span>
+    </footer>
+  </article>
+</div>
+
+<template id="drawer-act-1">
+  <header class="drawer-title-block">
+    <span class="drawer-label">Act 1 · full argument</span>
+    <h2 class="drawer-title">How StratsFi actually works, and why each benefit is real.</h2>
+    <p class="drawer-deck">You've seen the six benefits on the page. This memo walks through each one: how it works, where it comes from, why it matters. We start with the architecture that makes everything below possible, then take the six benefits in order.</p>
+  </header>
+
+  <h3>What you're getting</h3>
+  <p>A leveraged position on any token that <strong>auto-rebalances continuously</strong>, produces <strong>convex returns</strong> (gains accelerate, losses decelerate), earns <strong>real yield</strong> from trading activity, and <strong>can't be force-liquidated</strong>. All in a single deposit.</p>
+
+  <h3>How it works (the short version)</h3>
+  <p>Every supported asset lives inside a <strong>pod</strong>: a self-contained system with two lending markets, a liquidity pool, and six strategy vaults. When you deposit, the vault builds a leveraged position automatically. You get a strategy token back. That's it.</p>
+  <p>The key innovation: <strong>automated rebalancing</strong>. External bots continuously adjust your leverage before it reaches dangerous levels. This keeps positions safe (no liquidation cliff) and produces the outperforming returns. Without rebalancing, it would just be a leveraged LP. With it, you get structured products that outperform linear leverage in both directions.</p>
+
+  <h3>01. Six strategies, one for every directional view</h3>
+  <p><strong>Takeaway:</strong> long, short, or neutral on any token. Pick the direction you believe in, pick the aggression level. The protocol handles the rest.</p>
+
+  <p>Every pod ships with the same six strategies, three directional bets across two aggression tiers:</p>
+  <table class="drawer-table">
+    <thead><tr><th>Strategy</th><th>What it does</th><th>Best for</th><th>Max loss</th></tr></thead>
+    <tbody>
+      <tr><td>ETH+</td><td>2x long with yield</td><td>ETH bulls who want safer leverage + yield</td><td>100%</td></tr>
+      <tr><td>SuperETH+</td><td>4x long with USDC cashback floor</td><td>Convex long with 50% downside cap</td><td><strong>50%</strong></td></tr>
+      <tr><td>longETH+</td><td>4x max long, no floor</td><td>Max conviction longs</td><td>100%</td></tr>
+      <tr><td>ETH_USDC+</td><td>Stable USDC position with yield</td><td>Earning yield without directional risk</td><td>100%</td></tr>
+      <tr><td>SuperUSDC+</td><td>4x short with ETH cashback</td><td>Crash protection that also wins if ETH rises</td><td><strong>~5.5%</strong></td></tr>
+      <tr><td>longUSDC+</td><td>4x max short, no floor</td><td>Max conviction shorts / hedges</td><td>100%</td></tr>
+    </tbody>
+  </table>
+  <p><strong>What each flavor is for:</strong></p>
+  <ul>
+    <li><strong>ETH+:</strong> the conservative 2× long. Same directional exposure as spot ETH, but earning lending and trading yield along the way. Linear payoff, no cashback.</li>
+    <li><strong>ETH_USDC+:</strong> the neutral / stable option. Deposit USDC, earn yield from the pod's lending and trading activity with minimal directional exposure. Behaves like a yield-bearing stablecoin with a slight short bias, effectively a stable carry position.</li>
+    <li><strong>SuperETH+ / SuperUSDC+:</strong> the flagship strategies. 4× leverage with a built-in cashback floor that caps your downside. Convex gains with serious downside protection.</li>
+    <li><strong>longETH+ / longUSDC+:</strong> the max-aggression versions. 4× leverage, no cashback floor. All capital in the leveraged component for traders who want maximum convex exposure.</li>
+  </ul>
+
+  <p><strong>Plus: any token can have a pod.</strong> LSTs, LRTs, memecoins, new launches, RWAs. Every ERC-20 is eligible. StratsFi is one of the only lending architectures in DeFi that can bootstrap a leveraged market from user demand alone, with no pre-existing supply required. When a user takes a leveraged position, the borrow rate spikes, external suppliers see the yield and deploy capital, and the market forms.</p>
+
+  <p><strong>Regime-independent by design.</strong> Because every pod ships long, short, and neutral strategies at the same time, the product earns in every market regime. Volatile ups, volatile downs, compressed sideways, bull or bear. The protocol doesn't require a specific market direction to produce yield or attract users. Most leveraged DeFi products work in exactly one regime; StratsFi works in all of them.</p>
+
+  <h3>02. Safer leverage: liquidation risk is minimal</h3>
+  <p><strong>Takeaway:</strong> StratsFi replaces fixed liquidation thresholds with a continuous market of rebalancing bots. Under normal market conditions your position is always being adjusted well before any danger threshold, so liquidation risk becomes minimal rather than a constant concern.</p>
+
+  <p><strong>How it works.</strong> On a perp or lending market, if your LTV hits a specific number, you get liquidated at a penalty and MEV bots eat the difference. One bad moment → everything gone.</p>
+  <p>StratsFi doesn't rely on fixed liquidation thresholds. Instead, a growing bounty is available to <em>any</em> bot that rebalances your position back toward target leverage. The bounty scales with how far off target you are:</p>
+  <table class="drawer-table">
+    <thead><tr><th>How far off target</th><th>Bounty paid to rebalancer</th><th>What happens</th></tr></thead>
+    <tbody>
+      <tr><td>Within 0.3%</td><td>Zero</td><td>Position is at target, no churn on noise</td></tr>
+      <tr><td>0.3% – 5%</td><td>Small (0.1–1%)</td><td>Normal rebalancing, bots compete for the bounty</td></tr>
+      <tr><td>5% – 15%</td><td>Medium (1–3%)</td><td>Urgent rebalancing, more bots pile in</td></tr>
+      <tr><td>15%+</td><td>Max (3–5%+)</td><td>Emergency, every bot in the ecosystem is racing</td></tr>
+    </tbody>
+  </table>
+  <p>Because the bounty escalates smoothly (instead of activating at a hard threshold), rebalancing always happens well before your position becomes dangerous. No "first to hit the cliff" dynamic. Just continuous, competitive adjustment.</p>
+
+  <p><strong>Manipulation resistance.</strong> Bots can't profit from triggering your rebalance with a brief price spike: the bounty only pays if the price move is real (verified by 10-minute average oracles, blended between the internal pool and external Chainlink feeds). An attacker would need to sustain a fake price against arbitrage for ten minutes to even begin affecting the system.</p>
+
+  <p><strong>The net effect.</strong> Same safety as liquidations. None of the predatory dynamics: no hard cliff, no MEV extraction, no cascade risk, no race to the cheap liquidation.</p>
+
+  <h3>03. Convex returns: the "supercharged" payoffs</h3>
+  <p><strong>Takeaway:</strong> the convex payoffs aren't a fancy options overlay or a derivative bolted on top. They emerge naturally from continuous rebalancing, and that's what enables strategies like SuperUSDC+ that win in both directions.</p>
+
+  <p><strong>The intuition.</strong> Strategies auto-rebalance continuously based on leverage drift. When the price moves in your favour, the position leans harder in. When it moves against you, it leans out. Over time: gains compound more efficiently, losses are softened. This continuous rebalancing is the key advantage over linear leverage products.</p>
+
+  <p><strong>A clarification on "4× leverage".</strong> The "4×" refers to the loan-to-value ratio inside the position (75% LTV → 4× leverage on the LP). It does <em>not</em> mean "4× directional exposure to ETH." Because the collateral is a liquidity pool (half ETH, half USDC), your actual ETH exposure changes with price:</p>
+  <ul>
+    <li><strong>At entry (k=1):</strong> roughly 2× effective ETH exposure</li>
+    <li><strong>ETH +100% (k=2):</strong> exposure grows to 4×, leaning into the winner</li>
+    <li><strong>ETH +200% (k=3):</strong> exposure grows to 6×</li>
+    <li><strong>ETH −50% (k=0.5):</strong> exposure shrinks to 1×, leaning out of the loser</li>
+    <li><strong>ETH −90% (k=0.1):</strong> exposure shrinks to 0.2×</li>
+  </ul>
+  <p>That's what convexity means in practice: the position leans harder into winners and out of losers, automatically.</p>
+
+  <p><strong>The key insight.</strong> The convex payoffs aren't created using options or exotic derivatives. They emerge naturally from continuous rebalancing on a leveraged LP position. The protocol takes something that already exists in DeFi (LP positions) and adds the rebalancing layer that produces structured, outperforming payoffs.</p>
+
+  <p><strong>The cost of convexity.</strong> Continuous rebalancing isn't free. Each rebalance pays a small bounty to the bot that executes it (typically 0.1–2% of the rebalanced amount, funded from position equity). Think of this as the premium you'd pay for options exposure in TradFi, except it's priced continuously by a competitive market. The offset: rebalancing costs only occur when price moves, which is exactly when trading fees plus lending yield (see Section 04) are generated. In most market conditions, <em>especially on volatile tokens</em>, those yields more than cover the rebalancing cost. The soft spot is extended flat markets where rebalancing costs accumulate without offsetting directional gains.</p>
+
+  <p><strong>SuperUSDC+, the strategy that wins in both directions.</strong> The payoff below has two components: an inverse-quadratic short piece (explosive when ETH crashes) plus a linear ETH cashback piece (gains when ETH rises). The two together produce this:</p>
+  <table class="drawer-table">
+    <thead><tr><th>If ETH moves</th><th>Position value (from $1,000)</th><th>Return</th></tr></thead>
+    <tbody>
+      <tr><td>−90%</td><td>$50,050</td><td><strong>+4,905%</strong></td></tr>
+      <tr><td>−50%</td><td>$2,250</td><td>+125%</td></tr>
+      <tr><td>−25%</td><td>$1,264</td><td>+26%</td></tr>
+      <tr><td>0%</td><td>$1,000</td><td>—</td></tr>
+      <tr><td>+26%</td><td>$945</td><td><strong>−5.5% (worst case)</strong></td></tr>
+      <tr><td>+100%</td><td>$1,125</td><td>+12.5%</td></tr>
+      <tr><td>+200%</td><td>$1,556</td><td>+55.6%</td></tr>
+      <tr><td>+500%</td><td>$3,014</td><td>+201%</td></tr>
+    </tbody>
+  </table>
+  <p>The worst case across the entire price domain is <strong>−5.5%</strong>, in a narrow band around ETH +26%. Below that, the inverse-square component explodes. Above ETH +100%, the linear cashback dominates and the position turns positive again. <strong>Down 90%: +4,905%. Up 500%: +201%.</strong> No similar product exists in DeFi or in TradFi at retail minimums.</p>
+
+  <h3>04. Triple-digit APY, on top of the directional payoff</h3>
+  <p><strong>Takeaway:</strong> your position earns real yield from actual trading activity while it waits for the price move. Not emissions. Not inflation. Pure bonus stacked on whatever the price does.</p>
+
+  <p>Three organic yield sources:</p>
+  <ol>
+    <li><strong>Lending interest.</strong> The LP collateral backing your position also earns interest as borrowers pay for leverage in the pod's lending markets. That interest flows to your position, offsetting much of the interest you pay on your own debt.</li>
+    <li><strong>AMM trading fees.</strong> Every external price move creates an arbitrage opportunity in the strETH/strUSDC pool. Bots trade in to close the gap, paying fees that flow into the LP. Higher volatility = more fees.</li>
+    <li><strong>Wrap/unwrap arbitrage.</strong> Every deposit (TKN → strTKN) and withdrawal creates supply/demand shifts that generate additional trading activity.</li>
+  </ol>
+
+  <p>On volatile tokens (memes, low-cap alts, new launches), this yield stack alone can reach <strong>100–300% APY</strong>, proven live on Peapods pods. On stable pairs, it's lower but still meaningful. The key point: the yield is denominated in <em>real trading activity</em>, so it's sustainable and scales with market volatility. No token emissions, no inflation, no "pay to farm" schemes that eventually dilute everyone.</p>
+
+  <h3>05. Capital efficiency: one deposit, up to 4× the work</h3>
+  <p><strong>Takeaway:</strong> every dollar in a 4× leveraged position is doing 4× the directional work. And on the two flagship strategies (SuperETH+ and SuperUSDC+), half of your deposit comes back as a liquid asset you can deploy anywhere, so your capital runs in parallel.</p>
+
+  <p><strong>4× leverage from one deposit.</strong> In any of the 4× strategies (SuperETH+, SuperUSDC+, longETH+, longUSDC+), the protocol builds a position with 4× the leverage you'd get by holding the underlying asset directly. A $1,000 deposit controls a $4,000 LP position on the protocol's side, producing the convex payoff shapes described in Section 03.</p>
+
+  <p><strong>Cashback, only on SuperETH+ and SuperUSDC+.</strong> The "Super" strategies return half your deposit as a liquid asset at entry. This is called cashback, and only these two strategies ship with it:</p>
+  <ul>
+    <li><strong>SuperETH+</strong> deposit of $1,000 produces $500 SuperETH+ position plus <strong>$500 USDC cashback</strong></li>
+    <li><strong>SuperUSDC+</strong> deposit of $1,000 produces $500 SuperUSDC+ position plus <strong>$500 strETH cashback</strong> (which also earns lending interest)</li>
+  </ul>
+  <p>When you pick one of these two, your $1,000 outlay produces a leveraged convex position on half your capital <em>plus</em> a fully liquid composable asset on the other half. Deploy the cashback into another DeFi protocol, hold it as dry powder, or use it as collateral elsewhere. Your money does two jobs at once.</p>
+
+  <p><strong>The max-loop variants (longETH+, longUSDC+)</strong> take the opposite choice: instead of returning the cashback, they recycle it into additional leverage for maximum convex exposure. No cashback, no downside floor, higher potential return and higher max loss. Same 4× leverage, different capital allocation. Pick based on how much you want held back as liquid.</p>
+
+  <p><strong>Cashback also creates the downside floor on SuperETH+ / SuperUSDC+.</strong> The cashback component doesn't move with the underlying token's price, so it anchors the position's minimum value. This is where SuperETH+'s 50% max loss and SuperUSDC+'s ~5.5% max loss come from.</p>
+
+  <p>The 2× strategies (ETH+, ETH_USDC+) are linear and don't have cashback. They're structured differently because 2× leverage on the LP already uses the full deposit.</p>
+
+  <h3>06. The simplest leveraged product in DeFi to actually use</h3>
+  <p><strong>Takeaway:</strong> forget the math. From a UX standpoint, this is easier than almost every other leveraged product in DeFi.</p>
+
+  <p>Compare the actual user experience:</p>
+  <ul>
+    <li><strong>vs. perps:</strong> no funding rate to monitor. Minimal liquidation risk instead of a fixed liquidation price. No leverage decay over time. No order books. Pick a strategy, deposit, walk away.</li>
+    <li><strong>vs. options:</strong> you see <em>exactly</em> what you get paid at every possible price <em>before</em> you enter. No Greeks, no implied volatility, no expiry to watch. The calculator on the page shows your full payoff curve in one screen.</li>
+    <li><strong>vs. LPing yourself:</strong> LP providers experience impermanent loss as drag. StratsFi's rebalancing layer converts that into a structured convex payoff. Same underlying LP, but with a mechanism that turns price movement into amplified returns instead of drag.</li>
+  </ul>
+
+  <p>One deposit, one strategy choice, and the position runs itself (including rebalancing, yield compounding, and cashback delivery) until you exit.</p>
+
+  <h3>What this looks like next to everything else</h3>
+  <p>For a $1,000 deposit, here's how the math plays out compared to plain holding and a 2× linear leveraged long (e.g., a 2× perp):</p>
+  <table class="drawer-table">
+    <thead><tr><th>Token price</th><th>Hold token</th><th>2× linear long</th><th>SuperETH+</th><th>longETH+</th></tr></thead>
+    <tbody>
+      <tr><td>+200% (k=3)</td><td>$3,000</td><td>$5,000</td><td>$5,000</td><td>$9,000</td></tr>
+      <tr><td>+100% (k=2)</td><td>$2,000</td><td>$3,000</td><td>$2,500</td><td>$4,000</td></tr>
+      <tr><td>+50% (k=1.5)</td><td>$1,500</td><td>$2,000</td><td>$1,625</td><td>$2,250</td></tr>
+      <tr><td>0% (k=1)</td><td>$1,000</td><td>$1,000</td><td>$1,000</td><td>$1,000</td></tr>
+      <tr><td>−25% (k=0.75)</td><td>$750</td><td>$500</td><td>$781</td><td>$563</td></tr>
+      <tr><td>−50% (k=0.5)</td><td>$500</td><td><strong>$0 (liquidated)</strong></td><td>$625</td><td>$250</td></tr>
+      <tr><td>−90% (k=0.1)</td><td>$100</td><td>total loss</td><td>$505</td><td>$10</td></tr>
+    </tbody>
+  </table>
+  <p>SuperETH+ outperforms holding ETH at every price point except a narrow range around k=1. It outperforms the 2× linear position at every point where the linear position would be liquidated (ETH −50% and below). The trade-off: in moderate bull markets (k=1.5 to k=2), a 2× linear position captures slightly more upside, but only because you've survived without being liquidated. <strong>You're trading peak upside for survival and convex downside protection.</strong></p>
+
+  <p class="drawer-pull">A leveraged position on AMM liquidity that produces convex payoffs through continuous rebalancing, eliminates liquidations through a bounty market, generates yield from organic activity, returns half your capital as a liquid asset, and works on any ERC-20. This is the most powerful financial primitive currently shipping in DeFi.</p>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>

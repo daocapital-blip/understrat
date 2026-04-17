@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>underrated.fi · act 4 · the thesis — data-driven valuation</title>
+<meta name="description" content="Act 4 of an independent thesis on StratsFi. TVL forecast from capture rates + DCF valuation from DefiLlama-verified P/E comparables = the actual forecast." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Caveat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="thesis">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <filter id="stamp-rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="2" />
+      <feDisplacementMap in="SourceGraphic" scale="1.3" />
+      <feComponentTransfer><feFuncA type="linear" slope="0.88"/></feComponentTransfer>
+    </filter>
+  </defs>
+</svg>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="masthead">
+  <a href="index.html" class="brand">
+    <span class="brand-mark">◐</span>
+    <span class="brand-text">underrated<span class="brand-dot">.</span>fi</span>
+    <span class="brand-meta">— a fansite · filed pre-launch</span>
+  </a>
+
+  <nav class="acts-nav">
+    <a href="index.html" class="act-tab"><span class="act-num">1</span>the product</a>
+    <a href="protocol.html" class="act-tab"><span class="act-num">2</span>the protocol</a>
+    <a href="token.html" class="act-tab"><span class="act-num">3</span>the token</a>
+    <a href="thesis.html" class="act-tab act-tab-current"><span class="act-num">4</span>the thesis</a>
+  </nav>
+
+  <div class="header-right">
+    <button class="edge-btn" type="button" disabled>the edge <span class="soon">soon</span></button>
+  </div>
+</header>
+
+<div class="rail" aria-hidden="true">
+  <div class="rail-fill" id="rail-fill"></div>
+</div>
+
+<main id="top">
+
+  <nav class="act-breadcrumb-bar">
+    <a href="index.html">← act 1 · the product</a>
+    <span class="crumb-sep">·</span>
+    <a href="protocol.html">← act 2 · the protocol</a>
+    <span class="crumb-sep">·</span>
+    <a href="token.html">← act 3 · the token</a>
+    <span class="crumb-kicker">act 4 · the thesis</span>
+  </nav>
+
+  <!-- ============================================================ -->
+  <!-- PART 1 — THE APPROACH                                       -->
+  <!-- ============================================================ -->
+  <section class="act" id="methodology">
+    <div class="act-head">
+      <span class="stamp stamp-floating stamp-red stamp-chapter">THE THESIS</span>
+      <span class="act-label"><span class="act-roman">Act 4 · part 1</span> · the thesis</span>
+      <h2 class="act-title">
+        Why I'm betting on Strats. <em>And how I'm sizing the bet.</em>
+      </h2>
+      <p class="act-deck">
+        My thesis has always focused on four things:
+      </p>
+    </div>
+
+    <div class="key-points">
+      <ol class="key-list">
+        <li><strong>A protocol I will personally use.</strong> Returns that accelerate the more I'm right, no-liquidation leverage, and real yield on any token. These are products I actually want in my portfolio.</li>
+        <li><strong>Proven PMF or a clear path to growth.</strong> Peapods hit $105M TVL in 8 months with one narrow product, earning DeFi-leading revenue efficiency. Strats is that same engine, dramatically improved.</li>
+        <li><strong>A trustworthy team with a track record.</strong> Self-funded audits. Shipped through two bear markets. Never pivoted to whatever narrative trended. Years of consistent execution.</li>
+        <li><strong>A token that directly benefits from protocol usage.</strong> 60% of every dollar of revenue routes to $STRATS buybacks. Not governance votes. Not future fee switches. Revenue flows to holders by design, from day one.</li>
+      </ol>
+    </div>
+
+    <p class="act-deck" style="margin-top: 0;">
+      StratsFi checks all four. But what makes this specific: <strong>the timing.</strong> Peapods' cascade was a leverage failure, not a revenue failure. Strats fixes the leverage layer. At $4.8M market cap, the market hasn't re-priced for the relaunch yet.
+    </p>
+    <p class="act-deck" style="margin-top: 0;">
+      <strong>Part 2</strong> estimates how much TVL Strats can realistically capture over 24 months. <strong>Part 3</strong> converts that TVL into what it means for the token price.
+    </p>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 2 — TVL FORECAST                                        -->
+  <!-- ============================================================ -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-label"><span class="act-roman">Act 4 · part 2</span> · the TVL forecast</span>
+      <h2 class="act-title">
+        How much TVL can Strats capture? <em>Three market buckets. Four scenarios.</em>
+      </h2>
+      <p class="act-deck">
+        Peapods captured 0.29% market share of its $36.3B addressable market and hit $105M TVL. Strats addresses ~$199B across three buckets. We set market share targets for each, calibrated from what 30 real DeFi protocols achieve in their categories on DefiLlama.
+      </p>
+    </div>
+
+    <div class="key-points">
+      <div class="key-points-head">
+        <div class="key-points-titles">
+          <span class="key-points-label">the ~$199B addressable market, in three buckets</span>
+        </div>
+      </div>
+      <ol class="key-list">
+        <li><strong>Core · $36.3B</strong> (Yield + Long-tail tokens) — Peapods' proven market. Comparables: Convex 10%, Pendle 28% of Yield.</li>
+        <li><strong>Adjacent · $75B</strong> (Lending + Derivatives + Stable yield) — Established categories, harder to capture. Comparables: Euler 1.0%, Fluid 1.6%, Compound 2.6%.</li>
+        <li><strong>Expansion · $87.7B</strong> (LST/Restaking + RWA) — LSTs: stack staking + Strats yield. RWAs: structured products, just starting to pick up.</li>
+      </ol>
+    </div>
+
+    <div class="tool tool-trajectory">
+      <div class="tool-header">
+        <span class="tool-label">estimated TVL at 6, 12, and 24 months</span>
+        <span class="tool-sub">market share targets for each bucket, calibrated from 30 DeFi protocols on DefiLlama</span>
+      </div>
+      <div class="trajectory-table">
+        <div class="trajectory-row trajectory-3col trajectory-head">
+          <span class="trajectory-lbl"></span>
+          <span class="trajectory-col">6 months</span>
+          <span class="trajectory-col">12 months</span>
+          <span class="trajectory-col">24 months</span>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-bearish">
+          <span class="trajectory-lbl">bearish</span>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:14%"></span><span class="trajectory-val">$70M</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:20%"></span><span class="trajectory-val">$130M</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:21%"></span><span class="trajectory-val">$152M</span></div>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-conservative">
+          <span class="trajectory-lbl">conservative</span>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:21%"></span><span class="trajectory-val">$150M</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:30%"></span><span class="trajectory-val">$310M</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:41%"></span><span class="trajectory-val">$557M</span></div>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-base">
+          <span class="trajectory-lbl">base</span>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:27%"></span><span class="trajectory-val">$240M</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:42%"></span><span class="trajectory-val">$595M</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:61%"></span><span class="trajectory-val">$1.28B</span></div>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-bullish">
+          <span class="trajectory-lbl">bullish</span>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:40%"></span><span class="trajectory-val">$530M</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:65%"></span><span class="trajectory-val">$1.45B</span></div>
+          <div class="trajectory-col"><span class="trajectory-bar" style="width:100%"></span><span class="trajectory-val">$3.39B</span></div>
+        </div>
+      </div>
+      <div class="scale-note">
+        <span class="scale-note-k">bear-market baseline.</span> All sized against current TAM (~$199B, April 2026). DeFi has historically expanded 2-5× during bull cycles. At the same capture rates, all scenarios scale proportionally. Detailed capture rate breakdowns per time period are in the deep dive.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- PART 3 — ESTIMATED VALUATION                                  -->
+  <!-- ============================================================ -->
+  <section class="act">
+    <div class="act-head">
+      <span class="act-label"><span class="act-roman">Act 4 · part 3</span> · the estimated valuation</span>
+      <h2 class="act-title">
+        This isn't narrative. <em>It's protocol performance math.</em>
+      </h2>
+      <p class="act-deck">
+        Strats either generates revenue or it doesn't. If it does, we know exactly what that revenue is worth because we can see how GMX, Aave, Pendle, and other cashflow DeFi tokens trade right now. The valuation isn't speculation. It follows directly from protocol performance: TVL × revenue efficiency × 60% buyback × 25× P/E. You're not betting on what multiple the market assigns in a mania. You're betting on whether the protocol works. If it works, the math does the rest.
+      </p>
+    </div>
+
+    <div class="tool tool-trajectory" id="invest-calc">
+      <div class="tool-header">
+        <span class="tool-label">your investment at each scenario</span>
+        <span class="tool-sub">type how much you'd invest · see what each TVL scenario produces at 24 months</span>
+      </div>
+
+      <div class="scale-slider" style="max-width:400px; margin-bottom: 20px;">
+        <div class="scale-slider-head">
+          <span class="scale-slider-label">your investment</span>
+          <span class="scale-slider-value">$<input type="number" id="invest-amount" value="1000" min="1" max="1000000" style="font-family:var(--display);font-style:italic;font-size:inherit;color:inherit;background:none;border:none;border-bottom:2px solid var(--accent);width:90px;text-align:right;padding:0 2px;font-variant-numeric:tabular-nums;" /></span>
+        </div>
+      </div>
+
+      <div class="trajectory-table" id="invest-results">
+        <div class="trajectory-row trajectory-head">
+          <span class="trajectory-lbl"></span>
+          <span class="trajectory-col">24mo TVL</span>
+          <span class="trajectory-col">multiple</span>
+          <span class="trajectory-col">your return</span>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-bearish" data-mult="29">
+          <span class="trajectory-lbl">bearish</span>
+          <div class="trajectory-col"><span class="trajectory-val">$152M</span></div>
+          <div class="trajectory-col"><span class="trajectory-val">29×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-return">$29,000</span></div>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-conservative" data-mult="104">
+          <span class="trajectory-lbl">conservative</span>
+          <div class="trajectory-col"><span class="trajectory-val">$557M</span></div>
+          <div class="trajectory-col"><span class="trajectory-val">104×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-return">$104,000</span></div>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-base" data-mult="240">
+          <span class="trajectory-lbl">base</span>
+          <div class="trajectory-col"><span class="trajectory-val">$1.28B</span></div>
+          <div class="trajectory-col"><span class="trajectory-val">240×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-return">$240,000</span></div>
+        </div>
+        <div class="trajectory-row trajectory-3col trajectory-bullish" data-mult="636">
+          <span class="trajectory-lbl">bullish</span>
+          <div class="trajectory-col"><span class="trajectory-val">$3.39B</span></div>
+          <div class="trajectory-col"><span class="trajectory-val">636×</span></div>
+          <div class="trajectory-col"><span class="trajectory-val invest-return">$636,000</span></div>
+        </div>
+      </div>
+
+      <div class="scale-note">
+        <span class="scale-note-k">how the valuation works.</span> Every TVL scenario generates revenue at 0.5% monthly (the average during Peapods' TVL run-up). 60% buys back $STRATS. Valued at 25× (median of DeFi cashflow tokens). Simplified: <strong>FDV = TVL × 0.9</strong>. One variable: TVL. Full comparable data in the deep dive.
+      </div>
+    </div>
+
+    <div class="risk-callout">
+      <div class="risk-callout-side">
+        <span class="risk-callout-label">bearish floor</span>
+        <span class="risk-callout-val"><em>29×</em></span>
+      </div>
+      <span class="risk-callout-sep">vs</span>
+      <div class="risk-callout-side">
+        <span class="risk-callout-label">base case</span>
+        <span class="risk-callout-val"><em>240×</em></span>
+      </div>
+      <p class="risk-callout-note">Even the bearish case (Peapods' proven rate, nothing improves) produces a 29× from today's price. The conservative case alone is 104×. Downside risks (exploits, slower growth, competitive pressure) are real but observable within months of launch.</p>
+    </div>
+
+    <div class="key-points">
+      <div class="key-points-head">
+        <div class="key-points-titles">
+          <span class="key-points-label">the risk-adjusted case</span>
+          <span class="key-points-sub">why the math favours taking a position even if you're not fully convinced</span>
+        </div>
+      </div>
+      <ol class="key-list">
+        <li>
+          <strong>The coin flip you'd always take.</strong>
+          Imagine someone offers you a bet. You put in $100. There's a ~20% chance something breaks (exploit, team failure) and you lose the $100. There's an ~80% chance the protocol works, and you win somewhere between $2,900 (bearish, 29×) and $63,600 (bullish, 636×). You don't need to know the exact outcome. You just need to know the bet is worth taking. In expected value terms, every $1 risked has a weighted payoff of roughly $50-$100, depending on how you weight the scenarios. Most investments in crypto, venture, or even public equity don't offer that ratio.
+        </li>
+        <li>
+          <strong>Compare to anything else you could buy.</strong>
+          ETH from here might 2-3× in a bull cycle. BTC might 2×. An altcoin with narrative might 10×. A pre-launch token with a proven revenue engine, a team that already shipped at $105M TVL, and a $4.8M market cap has a 29× floor before any improvement kicks in. The risk/reward is structurally different from almost anything else at this price level.
+        </li>
+        <li>
+          <strong>The risks are real but monitorable.</strong>
+          Smart contract exploits, team execution failure, competitive pressure, revenue underperformance. All legitimate risks. But each is observable within weeks to months of launch. You don't need to wait 24 months. If month-3 TVL is tracking bearish or below, you have data to act on. If it's tracking conservative or above, the thesis is validating in real time.
+        </li>
+        <li>
+          <strong>Bear-market TAM, bull-market product.</strong>
+          The ~$199B TAM is sized during current conditions. DeFi has expanded 2-5× during previous bull cycles. At the same market share on a $400B TAM, every scenario scales proportionally. The product (leverage + yield) attracts more capital when risk appetite returns.
+        </li>
+      </ol>
+    </div>
+
+    <p class="tok-note">
+      <span class="tok-note-k">not investment advice.</span> This is an independent analysis by one anonymous DeFi user. Every input is verifiable on DefiLlama. Every assumption is transparent. Disagree with any capture rate, rev/TVL, or P/E multiple? Change it and recalculate. The formula is the same either way.
+    </p>
+  </section>
+
+  <!-- Close -->
+  <section class="close" id="close">
+    <span class="act-label close-label">end of the thesis</span>
+    <h3 class="close-title">
+      I own a piece of this engine. <em>And I'm genuinely excited.</em>
+    </h3>
+
+    <p class="closing-claim">
+      A product that outperforms every leveraged instrument in DeFi. A team that already proved $105M TVL and $7.7M/year in real revenue. A token where 60% of that revenue flows directly to holders. And a market cap that hasn't caught up yet. I've done the research. I own the tokens. I can't wait to actually use the protocol when it launches.
+    </p>
+
+    <p class="closing-claim">
+      The formula is simple: FDV = TVL × 0.9. The conservative case alone is 104× from today's PEAS price. Every input is on DefiLlama. Whether you agree with my capture rates, my P/E, or my timing is up to you. The formula is transparent. Change the TVL and recalculate.
+    </p>
+
+    <p class="closing-claim" style="margin-top: 24px; padding-top: 24px; border-top: 1px dashed var(--paper-edge);">
+      Thanks for reading. This was genuinely fun to put together. This is not investment advice. It's a thesis I did for myself because I wanted to understand the opportunity properly. I happen to think the math is compelling enough to share. I own the tokens discussed in this thesis.
+    </p>
+
+    <div class="signoff-row">
+      <span class="stamp stamp-red stamp-filed">FILED · apr 2026</span>
+      <p class="signoff">
+        <em>Own a piece.</em> <span class="signoff-hand">— u.fi</span>
+        <br><a href="#" style="font-family:var(--mono);font-size:12px;letter-spacing:0.05em;color:var(--accent);margin-top:8px;display:inline-block;">follow me on X →</a>
+      </p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-inner">
+      <p class="foot-disclaimer">
+        <strong>not investment advice.</strong> an independent thesis by one DeFi user. not affiliated with StratsFi / Peapods. the author holds PEAS tokens. filed pre-launch, Apr 2026.
+      </p>
+      <p class="foot-links">
+        <a href="index.html">← act 1 · the product</a>
+        · <a href="protocol.html">← act 2 · the protocol</a>
+        · <a href="token.html">← act 3 · the token</a>
+      </p>
+    </div>
+  </footer>
+
+<button class="floating-dive open-drawer" type="button" data-drawer="drawer-act-4" aria-label="Open deep dive">
+  <span class="floating-dive-icon">❂</span>
+  <span class="floating-dive-label">deep dive</span>
+</button>
+
+</main>
+
+<!-- Memo drawer -->
+<div class="memo-backdrop" id="drawer-backdrop" hidden></div>
+<div class="memo-wrap" id="drawer" aria-hidden="true" role="dialog" aria-modal="true">
+  <article class="memo">
+    <header class="memo-letterhead">
+      <div class="memo-letterhead-row">
+        <span class="memo-mark">◐</span>
+        <span class="memo-brand">underrated<span class="memo-dot">.</span>fi <span class="memo-sub-brand">— deep dive</span></span>
+        <button class="memo-close" id="drawer-close" aria-label="Close memo">×</button>
+      </div>
+      <div class="memo-meta">
+        <div class="memo-meta-row"><span class="memo-meta-lbl">Re</span><span class="memo-meta-val" id="drawer-tag">an enclosure</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">From</span><span class="memo-meta-val">u.fi · anonymous DeFi user</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">Date</span><span class="memo-meta-val">April 2026 · pre-launch</span></div>
+        <div class="memo-meta-row"><span class="memo-meta-lbl">File</span><span class="memo-meta-val">No. 04 / 26 · classified</span></div>
+      </div>
+    </header>
+    <div class="memo-body" id="drawer-body"></div>
+    <footer class="memo-foot">
+      <span class="memo-foot-stamp">end of memo · u.fi</span>
+    </footer>
+  </article>
+</div>
+
+<template id="drawer-act-4">
+  <header class="drawer-title-block">
+    <span class="drawer-label">Act 4 · full argument</span>
+    <h2 class="drawer-title">The forecast methodology, in detail.</h2>
+    <p class="drawer-deck">Three market buckets. Capture rates at 6, 12, and 24 months. Every rate calibrated from a real DeFi protocol on DefiLlama. Plus the DCF formula from Act 3. No growth models, no compounding, no black boxes.</p>
+  </header>
+
+  <h3>The anchor: what Peapods proved</h3>
+  <p>Peapods reached <strong>$105M TVL</strong> at peak (October 2025, DefiLlama dashboard with TVL + Staked view) in 8 months from launch. One product (leveraged LP on volatile tokens), one direction (long only), ~5,400 users. Critically, Peapods was growing at <strong>~43% per month compound</strong> and still accelerating when a liquidation cascade interrupted it. This was not a natural peak or plateau. Extrapolating with normal deceleration, Peapods' trajectory would have produced $200M+ by month 12 and $300M+ by month 24.</p>
+  <p>Peapods' addressable market: the Yield category on DefiLlama ($6.3B) plus long-tail token holders ($30B estimated) who had zero yield options before Peapods gave them one. Combined: <strong>$36.3B</strong>.</p>
+  <p><strong>Peapods' capture rate: $105M / $36.3B = 0.29%.</strong> This is the proven floor.</p>
+
+  <h3>The calibration: 30 DeFi protocols on DefiLlama</h3>
+  <p>Each protocol's capture rate measured against its own DefiLlama category (api.llama.fi, April 16, 2026):</p>
+  <table class="drawer-table">
+    <thead><tr><th>Protocol</th><th>TVL</th><th>Category</th><th>Capture</th></tr></thead>
+    <tbody>
+      <tr><td>Ethena</td><td>$5.83B</td><td>Basis Trading ($9.6B)</td><td>60.6%</td></tr>
+      <tr><td>Lido</td><td>$22.1B</td><td>Liquid Staking ($44.5B)</td><td>49.6%</td></tr>
+      <tr><td>Aave V3</td><td>$25.6B</td><td>Lending ($52.5B)</td><td>48.8%</td></tr>
+      <tr><td>Pendle</td><td>$1.77B</td><td>Yield ($6.3B)</td><td>28.2%</td></tr>
+      <tr><td>Morpho</td><td>$7.53B</td><td>Lending ($52.5B)</td><td>14.3%</td></tr>
+      <tr><td>Convex</td><td>$630M</td><td>Yield ($6.3B)</td><td>10.0%</td></tr>
+      <tr><td>GMX V2</td><td>$264M</td><td>Derivatives ($2.5B)</td><td>10.4%</td></tr>
+      <tr><td>dYdX V4</td><td>$108M</td><td>Derivatives ($2.5B)</td><td>4.3%</td></tr>
+      <tr><td>Compound V3</td><td>$1.38B</td><td>Lending ($52.5B)</td><td>2.6%</td></tr>
+      <tr><td>Venus</td><td>$1.21B</td><td>Lending ($52.5B)</td><td>2.3%</td></tr>
+      <tr><td>Fluid</td><td>$813M</td><td>Lending ($52.5B)</td><td>1.6%</td></tr>
+      <tr><td>Euler V2</td><td>$520M</td><td>Lending ($52.5B)</td><td>1.0%</td></tr>
+      <tr><td>Gearbox</td><td>$48M</td><td>Lending ($52.5B)</td><td>0.09%</td></tr>
+      <tr><td>Silo V2</td><td>$40M</td><td>Lending ($52.5B)</td><td>0.08%</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Pattern:</strong> successful DeFi protocols capture 1-5% of their category. Category leaders capture 10-50%. Peapods at 0.29% of its market was a niche player with a narrow product. These rates, measured against each protocol's own category, calibrate our scenario capture rates below.</p>
+
+  <h3>The framework: three market buckets</h3>
+  <p>Strats' ~$199B TAM (from Act 2) split by competitive strength:</p>
+  <table class="drawer-table">
+    <thead><tr><th>Bucket</th><th>Segments</th><th>TAM</th><th>Strats' edge</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Core</strong></td><td>Yield ($6.3B) + Long-tail tokens ($30B)</td><td>$36.3B</td><td>Peapods' proven turf. Strongest competitive advantage.</td></tr>
+      <tr><td><strong>Adjacent</strong></td><td>Lending ($52.5B) + Derivatives ($2.5B) + Stable yield ($20B)</td><td>$75B</td><td>Metavaults, bear strategies, USDC+. Established categories, but users have lower risk appetite. Harder to capture from protocols with years of track record.</td></tr>
+      <tr><td><strong>Expansion</strong></td><td>LST/Restaking ($66.6B) + RWA ($27.1B)</td><td>$87.7B</td><td>LSTs: stack staking yield + volatility yield + leverage. RWAs: structured products on tokenised assets, only picking up meaningfully in 2025-26.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>The four scenarios: segment-by-segment capture rates</h3>
+  <table class="drawer-table">
+    <thead><tr><th>Bucket</th><th>Bearish</th><th>Conservative</th><th>Base</th><th>Bullish</th></tr></thead>
+    <tbody>
+      <tr><td>Core ($36.3B)</td><td>0.29% = $105M</td><td>1% = $363M</td><td>2% = $726M</td><td>5% = $1.82B</td></tr>
+      <tr><td>Adjacent ($75B)</td><td>0.05% = $38M</td><td>0.2% = $150M</td><td>0.5% = $375M</td><td>1.5% = $1.13B</td></tr>
+      <tr><td>Expansion ($87.7B)</td><td>0.01% = $9M</td><td>0.05% = $44M</td><td>0.2% = $175M</td><td>0.5% = $439M</td></tr>
+      <tr><td><strong>Total TVL</strong></td><td><strong>$152M</strong></td><td><strong>$557M</strong></td><td><strong>$1.28B</strong></td><td><strong>$3.39B</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h4>Why each rate is defensible</h4>
+  <ul>
+    <li><strong>Bearish core (0.29%):</strong> Peapods' exact proven rate. Not a model output. What the same engine already achieved with a worse product.</li>
+    <li><strong>Conservative core (1%):</strong> Convex captures 10% of Yield. Yearn captures 12%. 1% is the bottom of the range for successful protocols in the Yield category.</li>
+    <li><strong>Base adjacent (0.5%):</strong> Between Silo (0.08%) and Euler (1.0%) in Lending. Below Fluid (1.6%). A modest position.</li>
+    <li><strong>Bullish core (5%):</strong> Half of Convex (10%). One-fifth of Pendle (28%). Well below category leaders.</li>
+    <li><strong>Bullish adjacent (1.5%):</strong> Between Fluid (1.6%) and Compound (2.6%) of Lending. Major tier, not Dominant.</li>
+  </ul>
+
+  <h3>Time-phased capture rates</h3>
+  <p>Most DeFi forecasts pick a growth rate and compound it forward. That's guesswork. We do something simpler: set capture rates for each market bucket at three time points (6, 12, and 24 months), and sum. Each rate maps to a real protocol in that DefiLlama category. No growth models, no compounding.</p>
+  <p>Capture rates increase over time as Strats proves product-market fit and activates new segments. The bearish case stays in the core market only. The bullish case has all three buckets contributing increasing amounts. The rate at each time point reflects how much of each market Strats has penetrated by then.</p>
+
+  <h4>6-month capture rates</h4>
+  <table class="drawer-table">
+    <thead><tr><th>Bucket</th><th>Bearish</th><th>Conservative</th><th>Base</th><th>Bullish</th></tr></thead>
+    <tbody>
+      <tr><td>Core ($36.3B)</td><td>0.15%</td><td>0.3%</td><td>0.5%</td><td>1%</td></tr>
+      <tr><td>Adjacent ($75B)</td><td>0.02%</td><td>0.05%</td><td>0.08%</td><td>0.2%</td></tr>
+      <tr><td>Expansion ($87.7B)</td><td>~0%</td><td>~0%</td><td>~0%</td><td>0.02%</td></tr>
+      <tr><td><strong>6mo TVL</strong></td><td><strong>$70M</strong></td><td><strong>$150M</strong></td><td><strong>$240M</strong></td><td><strong>$530M</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h4>12-month capture rates</h4>
+  <table class="drawer-table">
+    <thead><tr><th>Bucket</th><th>Bearish</th><th>Conservative</th><th>Base</th><th>Bullish</th></tr></thead>
+    <tbody>
+      <tr><td>Core ($36.3B)</td><td>0.29%</td><td>0.6%</td><td>1%</td><td>2.5%</td></tr>
+      <tr><td>Adjacent ($75B)</td><td>0.03%</td><td>0.1%</td><td>0.25%</td><td>0.6%</td></tr>
+      <tr><td>Expansion ($87.7B)</td><td>~0%</td><td>0.02%</td><td>0.05%</td><td>0.1%</td></tr>
+      <tr><td><strong>12mo TVL</strong></td><td><strong>$130M</strong></td><td><strong>$310M</strong></td><td><strong>$595M</strong></td><td><strong>$1.45B</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h4>24-month capture rates (mature scenario)</h4>
+  <table class="drawer-table">
+    <thead><tr><th>Bucket</th><th>Bearish</th><th>Conservative</th><th>Base</th><th>Bullish</th></tr></thead>
+    <tbody>
+      <tr><td>Core ($36.3B)</td><td>0.29%</td><td>1%</td><td>2%</td><td>5%</td></tr>
+      <tr><td>Adjacent ($75B)</td><td>0.05%</td><td>0.2%</td><td>0.5%</td><td>1.5%</td></tr>
+      <tr><td>Expansion ($87.7B)</td><td>0.01%</td><td>0.05%</td><td>0.2%</td><td>0.5%</td></tr>
+      <tr><td><strong>24mo TVL</strong></td><td><strong>$152M</strong></td><td><strong>$557M</strong></td><td><strong>$1.28B</strong></td><td><strong>$3.39B</strong></td></tr>
+    </tbody>
+  </table>
+
+  <h3>TVL summary</h3>
+  <table class="drawer-table">
+    <thead><tr><th>Scenario</th><th>6 months</th><th>12 months</th><th>24 months</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Bearish</strong></td><td>$70M</td><td>$130M</td><td>$152M</td></tr>
+      <tr><td><strong>Conservative</strong></td><td>$150M</td><td>$310M</td><td>$557M</td></tr>
+      <tr><td><strong>Base</strong></td><td>$240M</td><td>$595M</td><td>$1.28B</td></tr>
+      <tr><td><strong>Bullish</strong></td><td>$530M</td><td>$1.45B</td><td>$3.39B</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Market cycle note</h3>
+  <p>All scenarios are sized against current bear-market TAM (~$199B, April 2026). DeFi TVL has historically expanded 2-5× during bull cycles ($20B to $180B in 2020-21, $40B to $100B+ in 2023-24). If DeFi enters a bull cycle within 24 months, the underlying TAM could grow to $300-500B. At the same capture rates, all scenarios scale proportionally. This forecast uses today's verifiable numbers and does not bake in cycle assumptions.</p>
+
+  <h3>TVL to valuation (DCF + comparable P/E)</h3>
+  <p>The valuation formula: <strong>TVL × 0.5% × 12 × 60% × 25 = FDV</strong>. Simplified: <strong>FDV = TVL × 0.9</strong>. Revenue efficiency (0.5%) is the average during Peapods' TVL run-up. P/E (25×) is the median of DeFi cashflow tokens. One variable: TVL.</p>
+  <table class="drawer-table">
+    <thead><tr><th>Input</th><th>Bearish</th><th>Conservative</th><th>Base</th><th>Bullish</th></tr></thead>
+    <tbody>
+      <tr><td>Rev/TVL (monthly)</td><td>0.50%</td><td>0.50%</td><td>0.50%</td><td>0.50%</td></tr>
+      <tr><td>P/E (6/12mo)</td><td>10×</td><td>20×</td><td>30×</td><td>50×</td></tr>
+      <tr><td>P/E (24mo, compressed)</td><td>10×</td><td>20×</td><td>25×</td><td>35×</td></tr>
+    </tbody>
+  </table>
+
+  <h4>P/E anchored to DeFi cashflow tokens (DefiLlama, April 2026)</h4>
+  <table class="drawer-table">
+    <thead><tr><th>Protocol</th><th>P/E (FDV)</th><th>Cashflow mechanism</th><th>Maps to</th></tr></thead>
+    <tbody>
+      <tr><td>GMX</td><td>7.6×</td><td>30% fees → stakers as ETH/AVAX</td><td rowspan="2">Bearish (10×)</td></tr>
+      <tr><td>Sky (MakerDAO)</td><td>10.3×</td><td>Smart Burn Engine → buyback + burn</td></tr>
+      <tr><td>Maple</td><td>15.9×</td><td>SYRUP staking earns protocol fees</td><td rowspan="2">Conservative (20×)</td></tr>
+      <tr><td>Aave</td><td>23.5×</td><td>Reserve factor + AAVE buyback program</td></tr>
+      <tr><td>Jupiter</td><td>30.5×</td><td>Active Staking Rewards to JUP stakers</td><td rowspan="2">Base (30×)</td></tr>
+      <tr><td>dYdX V4</td><td>32.8×</td><td>Trading fees → DYDX stakers in USDC</td></tr>
+      <tr><td>Pendle</td><td>43.7×</td><td>Yield fees → vePENDLE lockers</td><td rowspan="2">Bullish (50×)</td></tr>
+      <tr><td>Hyperliquid</td><td>67.1×</td><td>Buyback + burn from assistance fund</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Rev/TVL:</strong> flat 0.5% monthly across all scenarios (the average during Peapods' TVL run-up; historical range 0.30-0.75%). <strong>P/E:</strong> flat 25× across all scenarios (median of DeFi cashflow tokens). <strong>Simplified: FDV = TVL × 0.9.</strong> One variable: TVL. Strats' 60% buyback is among the highest revenue-share rates in DeFi.</p>
+
+  <h3>The valuation grid</h3>
+  <table class="drawer-table">
+    <thead><tr><th>Scenario</th><th>6 months FDV</th><th>12 months FDV</th><th>24 months FDV</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Bearish</strong></td><td>$63M</td><td>$117M</td><td>$137M</td></tr>
+      <tr><td><strong>Conservative</strong></td><td>$135M</td><td>$279M</td><td>$501M</td></tr>
+      <tr><td><strong>Base</strong></td><td>$216M</td><td>$536M</td><td>$1.15B</td></tr>
+      <tr><td><strong>Bullish</strong></td><td>$477M</td><td>$1.31B</td><td>$3.05B</td></tr>
+    </tbody>
+  </table>
+
+  <h3>What would break the thesis</h3>
+  <ul>
+    <li><strong>Smart contract exploit.</strong> TVL goes to near-zero. Catastrophic tail risk inherent to all DeFi.</li>
+    <li><strong>Sustained yield underperformance.</strong> If Strats APY consistently falls below lending alternatives (3-5%), no reason for capital to migrate.</li>
+    <li><strong>Competitive product launch.</strong> A major protocol ships an identical product with better distribution.</li>
+    <li><strong>Team execution failure.</strong> Pod expansion stalls. Bugs go unfixed. Community loses confidence.</li>
+  </ul>
+  <p>Each risk is monitorable within weeks of launch.</p>
+
+  <h3>Data sources</h3>
+  <ul>
+    <li>30-protocol capture rate data: DefiLlama API (api.llama.fi), April 16, 2026</li>
+    <li>Category TVLs: DefiLlama /protocols endpoint, summed by category</li>
+    <li>Peapods historical: DefiLlama /protocol/peapods-finance + dashboard (TVL + Staked view)</li>
+    <li>TAM segments (~$199B): 4 of 6 are DefiLlama category TVLs; 2 use broader estimates (see Act 2 memo)</li>
+    <li>P/E ranges: DefiLlama fees/revenue data for 16 DeFi cashflow protocols (GMX, Sky, Aave, Jupiter, dYdX, Pendle, Hyperliquid, etc.)</li>
+  </ul>
+
+  <p class="drawer-pull">The thesis: Peapods captured 0.29% of a $36.3B market and hit $105M TVL. Strats addresses ~$199B across three buckets with a better product. The valuation is simple: FDV = TVL × 0.9 (0.5% rev/TVL × 12 × 60% buyback × 25× P/E). At current PEAS prices, the range is 29× (bearish) to 636× (bullish) over 24 months. The conservative case alone is 104×. Every input is on DefiLlama. One variable: TVL.</p>
+</template>
+
+<script src="script.js"></script>
+</body>
+</html>
